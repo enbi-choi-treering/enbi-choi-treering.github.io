@@ -4,106 +4,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>목재의 방향과 주요 3단면 · Dendro-Edu</title>
+  <!-- 기존 스타일시트를 그대로 사용하여 홈화면과 동일한 레이아웃 유지 -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
   <style>
-    /* 클래스 앞에 .step-page-를 붙여 고유성 확보 */
-    .step-page-container { 
-      max-width: 1000px; 
-      margin: 0 auto; 
-      padding: 40px; 
-    }
-  
-    /* 홈 화면의 레이아웃과 겹치지 않게 'step-page'라는 접두어 사용 */
-    .step-page-content { background: #fff; padding: 30px; }
-    
-    /* 전체 배경색 및 폰트 */
-    body { background-color: #f4f7f6; font-family: 'Pretendard', sans-serif; color: #333; line-height: 1.6; margin: 0; padding: 0; }
-    .step-page-container { max-width: 1000px; margin: 0 auto; padding: 40px; }
-
-    /* 상단 헤더 */
-    .header { margin-bottom: 40px; }
-    .logo { font-size: 1.5rem; font-weight: bold; color: #2c3e50; text-decoration: none; display: inline-block; margin-bottom: 10px; }
-    .main-title { font-size: 1.2rem; color: #7f8c8d; margin: 0; }
-    .sub-title { font-size: 2.5rem; font-weight: 800; color: #2c3e50; margin: 5px 0; }
-    .meta-info { font-size: 0.9rem; color: #95a5a6; margin-bottom: 20px; }
-
-    /* 레이아웃 */
-    .section-wrap { margin-bottom: 60px; }
-    .section-title { font-size: 1.5rem; margin-bottom: 20px; color: #34495e; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
-    
-    /* 2단 구성 (세로 버튼 + 하얀 박스) */
+    /* 탭 및 학습 페이지용 스타일 (레이아웃 틀은 그대로 사용) */
+    .section-wrap { margin-bottom: 60px; padding: 20px; }
     .learning-grid { display: grid; grid-template-columns: 200px 1fr; gap: 30px; }
     .side-nav { display: flex; flex-direction: column; gap: 10px; }
-    .nav-btn { padding: 12px; border: none; background: #fff; border: 1px solid #ddd; cursor: pointer; text-align: left; border-radius: 4px; transition: 0.3s; }
+    .nav-btn { padding: 12px; border: 1px solid #ddd; background: #fff; cursor: pointer; text-align: left; }
     .nav-btn.active { background: #34495e; color: #fff; }
-    .step-content-box { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); min-height: 200px; }
-
-    /* 가로 탭 구성 (3단면용) */
-    .tab-container { display: flex; gap: 10px; margin-bottom: 20px; }
-    .tab-btn { padding: 10px 20px; border: 1px solid #34495e; background: transparent; cursor: pointer; border-radius: 4px; }
+    .content-box { background: #fff; padding: 30px; border: 1px solid #eee; border-radius: 8px; }
+    .tab-btn { padding: 10px 20px; border: 1px solid #34495e; background: transparent; cursor: pointer; }
     .tab-btn.active { background: #34495e; color: #fff; }
     .tab-panel { display: none; }
     .tab-panel.active { display: block; }
-
-    img { max-width: 100%; border-radius: 8px; margin-top: 15px; }
   </style>
 </head>
 <body>
 
-<div class="step-page-container">
-  <!-- 상단 헤더 -->
-  <header class="header">
-    <a href="../../index.html" class="logo">Dendro-Edu</a>
-    <p class="main-title">목재해부학 (Wood anatomy)</p>
-    <h1 class="sub-title">목재의 방향과 주요 3단면</h1>
-    <div class="meta-info">작성자: 최은비 · 업데이트: 2026.06.20</div>
+  <!-- 홈 화면과 동일한 헤더 사용 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="site-logo">🌳 Dendro<span>-Edu</span></a>
+    </div>
   </header>
 
-  <!-- 1. 목재의 구조 -->
-  <section class="section-wrap">
-    <h2 class="section-title">1. 목재의 구조</h2>
-    <div class="learning-grid">
-      <div class="side-nav">
-        <button class="nav-btn active" onclick="switchContent('struct-content', '수피 내용입니다.')">수피</button>
-        <button class="nav-btn" onclick="switchContent('struct-content', '형성층 내용입니다.')">형성층</button>
-      </div>
-      <div class="step-content-box" id="struct-content">수피, 형성층 등을 선택하여 상세 내용을 확인하세요.</div>
+  <!-- 기존의 컨테이너 클래스를 그대로 사용하여 여백 자동 적용 -->
+  <div class="content-layout" style="max-width: 1000px; margin: 40px auto;">
+    
+    <div class="header" style="margin-bottom: 40px;">
+        <h1 class="sub-title">목재의 방향과 주요 3단면</h1>
+        <div class="meta-info">작성자: 최은비 · 업데이트: 2026.06.20</div>
     </div>
-  </section>
 
-  <!-- 2. 침엽수와 활엽수종 원판 비교 -->
-  <section class="section-wrap">
-    <h2 class="section-title">2. 침엽수와 활엽수종 원판 비교</h2>
-    <div class="learning-grid">
-      <div class="side-nav">
-        <button class="nav-btn" onclick="switchContent('compare-content', '심재 비교 내용...')">심재</button>
-        <button class="nav-btn" onclick="switchContent('compare-content', '변재 비교 내용...')">변재</button>
+    <!-- 섹션들 -->
+    <section class="section-wrap">
+      <h2>1. 목재의 구조</h2>
+      <div class="learning-grid">
+        <div class="side-nav">
+          <button class="nav-btn active" onclick="switchContent('struct-content', '수피 내용입니다.')">수피</button>
+          <button class="nav-btn" onclick="switchContent('struct-content', '형성층 내용입니다.')">형성층</button>
+        </div>
+        <div class="content-box" id="struct-content">항목을 선택하세요.</div>
       </div>
-      <div class="step-content-box" id="compare-content">비교 항목을 선택하세요.</div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 3. 목재의 주요 3단면 -->
-  <section class="section-wrap">
-    <h2 class="section-title">3. 목재의 주요 3단면</h2>
-    <div class="tab-container">
-      <button class="tab-btn active" onclick="showTab(this, 'ts')">횡단면</button>
-      <button class="tab-btn" onclick="showTab(this, 'rs')">방사단면</button>
-      <button class="tab-btn" onclick="showTab(this, 'tls')">접선단면</button>
-    </div>
-    <div class="step-content-box">
-      <div id="ts" class="tab-panel active">횡단면(TS) 상세 설명과 <img src="ts_image.jpg" alt="TS"></div>
-      <div id="rs" class="tab-panel">방사단면(RS) 상세 설명과 <img src="rs_image.jpg" alt="RS"></div>
-      <div id="tls" class="tab-panel">접선단면(TLS) 상세 설명과 <img src="tls_image.jpg" alt="TLS"></div>
-    </div>
-  </section>
-</div>
+    <section class="section-wrap">
+      <h2>2. 침엽수와 활엽수종 원판 비교</h2>
+      <div class="learning-grid">
+        <div class="side-nav">
+          <button class="nav-btn" onclick="switchContent('compare-content', '심재 비교...')">심재</button>
+          <button class="nav-btn" onclick="switchContent('compare-content', '변재 비교...')">변재</button>
+        </div>
+        <div class="content-box" id="compare-content">항목을 선택하세요.</div>
+      </div>
+    </section>
+
+    <section class="section-wrap">
+      <h2>3. 목재의 주요 3단면</h2>
+      <div class="tab-container">
+        <button class="tab-btn active" onclick="showTab(this, 'ts')">횡단면</button>
+        <button class="tab-btn" onclick="showTab(this, 'rs')">방사단면</button>
+        <button class="tab-btn" onclick="showTab(this, 'tls')">접선단면</button>
+      </div>
+      <div class="content-box">
+        <div id="ts" class="tab-panel active">횡단면(TS) 상세...</div>
+        <div id="rs" class="tab-panel">방사단면(RS) 상세...</div>
+        <div id="tls" class="tab-panel">접선단면(TLS) 상세...</div>
+      </div>
+    </section>
+  </div>
 
 <script>
-  // 세로 버튼 내용 변경
-  function switchContent(id, text) {
-    document.getElementById(id).innerHTML = text;
-  }
-  // 가로 탭 전환
+  function switchContent(id, text) { document.getElementById(id).innerHTML = text; }
   function showTab(btn, tabId) {
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -111,6 +84,5 @@
     btn.classList.add('active');
   }
 </script>
-
 </body>
 </html>
