@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEP 1 · 목재의 방향과 주요 3단면 · Dendro-Edu</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <style>
+    /* ── 인터랙티브 섹션 공통 ── */
+    .interact-section {
+      margin-bottom: 3.5rem;
+    }
+
+    .interact-section .section-title {
+      margin-bottom: 1.25rem;
+    }
+
+    .interact-desc {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 1.25rem;
+    }
+
+    /* ── 버튼 그룹 ── */
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .topic-btn {
+      padding: 0.5rem 1.1rem;
+      border: 1.5px solid var(--border);
+      border-radius: 999px;
+      background: var(--bg-card);
+      color: var(--text-mid);
+      font-family: 'Noto Serif KR', serif;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all .18s;
+      white-space: nowrap;
+    }
+
+    .topic-btn:hover {
+      border-color: var(--bark-light);
+      color: var(--bark);
+      background: var(--bg-subtle);
+    }
+
+    .topic-btn.active {
+      background: var(--bark);
+      color: #F7F4EE;
+      border-color: var(--bark);
+      font-weight: 600;
+    }
+
+    .topic-btn.moss.active {
+      background: var(--moss);
+      border-color: var(--moss);
+    }
+
+    /* ── 설명 패널 ── */
+    .detail-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: none;
+    }
+
+    .detail-panel.visible {
+      display: block;
+    }
+
+    .panel-header {
+      background: var(--bg-subtle);
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .panel-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ring);
+      background: rgba(184,92,56,.1);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .panel-tag.moss {
+      color: var(--moss);
+      background: rgba(74,124,89,.1);
+    }
+
+    .panel-name {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--bark);
+    }
+
+    .panel-body {
+      padding: 1.5rem;
+    }
+
+    .panel-body p {
+      font-size: 0.92rem;
+      color: var(--text);
+      line-height: 1.85;
+      margin-bottom: 0.75rem;
+    }
+
+    .panel-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .panel-img {
+      margin-top: 1.25rem;
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--bg-subtle);
+      border: 1.5px dashed var(--border);
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .panel-img img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .panel-img .img-placeholder-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-soft);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      padding: 2.5rem;
+      text-align: center;
+    }
+
+    .img-caption {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: var(--text-soft);
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    /* ── 섹션2: 3단면 (2단 박스) ── */
+    .cross-section-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    @media (max-width: 600px) {
+      .cross-section-grid { grid-template-columns: 1fr; }
+    }
+
+    .sub-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .sub-panel-header {
+      background: var(--bg-subtle);
+      padding: 0.65rem 1rem;
+      font-family: 'Noto Serif KR', serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--bark);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sub-btn-group {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sub-btn {
+      flex: 1;
+      padding: 0.6rem 0.5rem;
+      background: none;
+      border: none;
+      border-right: 1px solid var(--border);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-mid);
+      cursor: pointer;
+      transition: all .15s;
+      text-align: center;
+    }
+
+    .sub-btn:last-child { border-right: none; }
+    .sub-btn:hover { background: var(--bg-subtle); color: var(--bark); }
+    .sub-btn.active {
+      background: var(--bark);
+      color: #F7F4EE;
+      font-weight: 600;
+    }
+
+    .sub-panel-body {
+      padding: 1rem;
+      min-height: 120px;
+    }
+
+    .sub-panel-body p {
+      font-size: 0.83rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin-bottom: 0.5rem;
+    }
+
+    .sub-panel-img {
+      margin-top: 0.75rem;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--bg-subtle);
+      border: 1.5px dashed var(--border);
+      min-height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sub-panel-img img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .sub-panel-img .img-placeholder-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: var(--text-soft);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .placeholder-icon {
+      opacity: .4;
+      margin-bottom: 0.35rem;
+    }
+
+    /* 패널 전환 애니메이션 */
+    .panel-fade {
+      animation: fadeIn .2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="site-logo">🌳 Dendro<span>-Edu</span></a>
+      <nav class="header-nav">
+        <a href="../../index.html">홈</a>
+        <a href="step1.html" class="active">목재해부학</a>
+        <a href="../../ko/woodidentification/step1.html">수종분석</a>
+        <a href="https://github.com/enbi-choi-treering" target="_blank">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <div class="content-layout">
+
+    <!-- 사이드바 -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <p class="sidebar-label">목재해부학</p>
+        <ul class="sidebar-nav">
+          <li><a href="step1.html" class="active"><span class="step-num">1</span>목재의 방향과 주요 3단면</a></li>
+          <li><a href="step2.html"><span class="step-num">2</span>목재 세포</a></li>
+          <li><a href="step3.html"><span class="step-num">3</span>침엽수 관찰 세포</a></li>
+          <li><a href="step4.html"><span class="step-num">4</span>활엽수 관찰 세포</a></li>
+          <li><a href="step5.html"><span class="step-num">5</span>침엽수-활엽수 세포 비교</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-label">수종분석</p>
+        <ul class="sidebar-nav">
+          <li><a href="../woodidentification/step1.html"><span class="step-num moss">1</span>목재의 방향 찾기</a></li>
+          <li><a href="../woodidentification/step2.html"><span class="step-num moss">2</span>프레파라트 제작</a></li>
+          <li><a href="../woodidentification/step3.html"><span class="step-num moss">3</span>현미경 관찰</a></li>
+          <li><a href="../woodidentification/step4.html"><span class="step-num moss">4</span>수종분석</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="content-main">
+
+      <div class="page-header">
+        <p class="page-eyebrow">목재해부학 · STEP 1</p>
+        <h1 class="page-title">목재의 방향과 주요 3단면</h1>
+        <p class="page-intro">
+          목재를 현미경으로 관찰하려면 먼저 <strong>올바른 방향</strong>으로 잘라야 합니다.
+          나무줄기의 구조와 자르는 방향을 이해하면, 각 단면에서 무엇을 볼 수 있는지 자연스럽게 파악됩니다.
+          아래 버튼을 눌러 각 항목을 탐색해 보세요.
+        </p>
+      </div>
+
+
+      <!-- ════════════════════════════════════════
+           섹션 1: 목재의 구조
+      ════════════════════════════════════════ -->
+      <section class="interact-section">
+        <h2 class="section-title">1. 목재의 구조</h2>
+        <p class="interact-desc">부위를 선택하면 아래에 세부 설명과 위치 이미지가 나타납니다.</p>
+
+        <!-- 버튼 그룹 -->
+        <div class="btn-group" id="structure-btns">
+          <button class="topic-btn" onclick="showStructure('bark')">수피</button>
+          <button class="topic-btn" onclick="showStructure('cambium')">형성층</button>
+          <button class="topic-btn" onclick="showStructure('xylem')">목부</button>
+          <button class="topic-btn" onclick="showStructure('sapwood')">변재</button>
+          <button class="topic-btn" onclick="showStructure('heartwood')">심재</button>
+          <button class="topic-btn" onclick="showStructure('pith')">수</button>
+        </div>
+
+        <!-- 설명 패널 -->
+        <div class="detail-panel" id="structure-panel">
+          <div class="panel-header">
+            <span class="panel-tag" id="s-tag">부위</span>
+            <span class="panel-name" id="s-name"></span>
+          </div>
+          <div class="panel-body">
+            <div id="s-desc"></div>
+            <div class="panel-img" id="s-img">
+              <div class="img-placeholder-text">
+                <svg class="placeholder-icon" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                이미지를 추가하세요<br>
+                <span style="font-size:.7rem">&lt;img src="이미지경로"&gt; 로 교체</span>
+              </div>
+            </div>
+            <p class="img-caption" id="s-caption"></p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ════════════════════════════════════════
+           섹션 2: 목재의 주요 3단면
+      ════════════════════════════════════════ -->
+      <section class="interact-section">
+        <h2 class="section-title">2. 목재의 주요 3단면</h2>
+        <p class="interact-desc">단면을 선택하면 두 개의 탭 박스가 나타납니다. 각 박스에서 용어설명 또는 단면사진을 눌러 확인하세요.</p>
+
+        <!-- 단면 선택 버튼 -->
+        <div class="btn-group" id="section-btns">
+          <button class="topic-btn moss" onclick="showCrossSection('ts')">횡단면 (TS)</button>
+          <button class="topic-btn moss" onclick="showCrossSection('tls')">접선단면 (TLS)</button>
+          <button class="topic-btn moss" onclick="showCrossSection('rs')">방사단면 (RS)</button>
+        </div>
+
+        <!-- 2단 박스 -->
+        <div class="cross-section-grid" id="cs-grid" style="display:none;">
+
+          <!-- 박스 1: 용어·단면사진 -->
+          <div class="sub-panel">
+            <div class="sub-panel-header" id="cs-box1-title">—</div>
+            <div class="sub-btn-group">
+              <button class="sub-btn active" id="cs-btn-term" onclick="showSubPanel('term')">용어설명</button>
+              <button class="sub-btn" id="cs-btn-photo" onclick="showSubPanel('photo')">단면사진</button>
+            </div>
+            <div class="sub-panel-body panel-fade" id="cs-content">
+              <p id="cs-text">—</p>
+              <div class="sub-panel-img" id="cs-img">
+                <div class="img-placeholder-text">
+                  <svg class="placeholder-icon" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                  이미지를 추가하세요
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 박스 2: 관찰 포인트 -->
+          <div class="sub-panel">
+            <div class="sub-panel-header">관찰 포인트</div>
+            <div class="sub-panel-body">
+              <div id="cs-points">—</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- 이전/다음 네비 -->
+      <nav class="page-nav">
+        <a href="../../index.html" class="page-nav-btn">← 목차로 돌아가기</a>
+        <a href="step2.html" class="page-nav-btn next">STEP 2: 목재 세포 →</a>
+      </nav>
+
+    </main>
+  </div>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>Dendro-Edu · 목재해부학 및 연륜연대법 자기주도 학습 오픈랩</p>
+    <p>작성자: <a href="https://github.com/enbi-choi-treering" target="_blank">최은비 (En-Bi CHOI)</a> · Hosted on GitHub Pages</p>
+  </footer>
+
+
+  <script>
+  /* ════════════════════════
+     섹션 1 데이터: 목재의 구조
+  ════════════════════════ */
+  const STRUCTURE = {
+    bark: {
+      name: '수피 (Bark)',
+      tag: '최외층',
+      desc: `<p>수피는 나무의 가장 바깥층으로, 외부 환경으로부터 나무를 보호하는 역할을 합니다. 크게 <strong>외수피(outer bark)</strong>와 <strong>내수피(inner bark, 체관부)</strong>로 나뉩니다.</p>
+             <p>외수피는 죽은 세포로 이루어져 있으며 기계적 보호와 수분 손실을 방지합니다. 내수피(체관부)는 살아있는 세포로 구성되며, 광합성 산물(당)을 나무 전체로 이동시킵니다.</p>`,
+      caption: '▲ 횡단면에서 바라본 수피의 위치 (가장 바깥쪽 층)',
+      /* 이미지를 추가할 경우: imgSrc: '../../assets/img/bark.jpg' */
+      imgSrc: null
+    },
+    cambium: {
+      name: '형성층 (Vascular Cambium)',
+      tag: '분열층',
+      desc: `<p>형성층은 수피와 목부 사이에 위치하는 얇은 세포층으로, 나무의 굵기 생장을 담당합니다. 세포분열이 활발한 <strong>분열조직(meristem)</strong>입니다.</p>
+             <p>형성층은 바깥쪽으로 체관부(내수피) 세포를, 안쪽으로 목부(물관부) 세포를 생성합니다. 봄철에 분열이 활발해지면서 연륜(나이테)의 한 층이 만들어집니다.</p>`,
+      caption: '▲ 수피와 목부 사이의 얇은 형성층 위치',
+      imgSrc: null
+    },
+    xylem: {
+      name: '목부 (Xylem / Wood)',
+      tag: '물·양분 이동',
+      desc: `<p>목부는 우리가 흔히 '목재'라고 부르는 부분입니다. 뿌리에서 흡수한 물과 무기염류를 잎까지 위쪽으로 운반하는 역할을 합니다.</p>
+             <p>목부는 침엽수의 경우 <strong>가도관(tracheid)</strong>, 활엽수의 경우 <strong>도관(vessel)</strong>이 주요 물 이동 통로로 작용합니다. 나무의 부피 대부분을 차지하는 구조입니다.</p>`,
+      caption: '▲ 나무 줄기의 대부분을 차지하는 목부',
+      imgSrc: null
+    },
+    sapwood: {
+      name: '변재 (Sapwood)',
+      tag: '기능재',
+      desc: `<p>변재는 목부의 바깥쪽, 형성층에 가까운 부분으로 <strong>살아있는 유세포(parenchyma)</strong>를 포함하고 있습니다. 수분과 양분의 이동이 활발하게 일어나는 기능적 목부입니다.</p>
+             <p>수종에 따라 변재의 두께가 다르며, 일반적으로 심재보다 색이 밝고 연합니다. 수분 함량이 높아 부후균에 취약한 편입니다.</p>`,
+      caption: '▲ 목부의 바깥쪽에 위치하는 밝은 색의 변재',
+      imgSrc: null
+    },
+    heartwood: {
+      name: '심재 (Heartwood)',
+      tag: '비기능재',
+      desc: `<p>심재는 목부의 중심부로, 세포가 죽고 <strong>타닌·수지·색소</strong> 등의 추출물이 침적되어 있습니다. 더 이상 물을 이동시키지 않는 비기능적 목부입니다.</p>
+             <p>추출물로 인해 변재보다 색이 짙고, 내구성과 내부후성이 높습니다. 수종 식별 시 색과 향이 중요한 단서가 됩니다. (예: 흑단의 짙은 검정색, 삼나무의 붉은 색)</p>`,
+      caption: '▲ 목부의 중심부, 색이 짙은 심재',
+      imgSrc: null
+    },
+    pith: {
+      name: '수 (Pith)',
+      tag: '중심부',
+      desc: `<p>수는 줄기의 가장 중심에 위치하는 조직으로, 어린 줄기에서는 양분 저장 역할을 합니다. 성숙한 나무에서는 수가 쪼그라들거나 비어있는 경우도 많습니다.</p>
+             <p>횡단면에서 보면 중앙의 원형 또는 별 모양으로 보이는 조직입니다. 수의 형태(원형, 삼각형, 오각형 등)와 색깔은 수종 식별에 보조적인 단서가 되기도 합니다.</p>`,
+      caption: '▲ 줄기의 정중앙에 위치하는 수',
+      imgSrc: null
+    }
+  };
+
+  function showStructure(key) {
+    const d = STRUCTURE[key];
+    /* 버튼 활성화 */
+    document.querySelectorAll('#structure-btns .topic-btn').forEach(b => b.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+    /* 패널 채우기 */
+    document.getElementById('s-tag').textContent = d.tag;
+    document.getElementById('s-name').textContent = d.name;
+    document.getElementById('s-desc').innerHTML = d.desc;
+    document.getElementById('s-caption').textContent = d.caption;
+    /* 이미지 */
+    const imgBox = document.getElementById('s-img');
+    if (d.imgSrc) {
+      imgBox.innerHTML = `<img src="${d.imgSrc}" alt="${d.name} 이미지">`;
+    } else {
+      imgBox.innerHTML = `<div class="img-placeholder-text">
+        <svg class="placeholder-icon" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        <strong>${d.name}</strong> 위치 이미지를 추가하세요<br>
+        <span style="font-size:.7rem">imgSrc 값에 이미지 경로를 입력하면 자동으로 표시됩니다</span>
+      </div>`;
+    }
+    /* 패널 표시 */
+    const panel = document.getElementById('structure-panel');
+    panel.classList.add('visible');
+    panel.classList.remove('panel-fade');
+    void panel.offsetWidth;
+    panel.classList.add('panel-fade');
+  }
+
+
+  /* ════════════════════════
+     섹션 2 데이터: 주요 3단면
+  ════════════════════════ */
+  const CROSS_SECTIONS = {
+    ts: {
+      label: '횡단면 (Transverse Section, TS)',
+      term: {
+        text: '횡단면은 나무의 종방향(길이 방향)에 <strong>수직</strong>으로 자른 단면입니다. 통나무를 가로로 잘랐을 때 보이는 면으로, 연륜(나이테)이 동심원 형태로 보입니다.',
+        imgSrc: null,
+        imgLabel: '횡단면 현미경 사진 (TS)'
+      },
+      photo: {
+        text: '횡단면 사진에서는 도관(활엽수) 또는 가도관(침엽수)의 배열 패턴, 연륜 경계, 방사조직의 방향을 확인할 수 있습니다.',
+        imgSrc: null,
+        imgLabel: '횡단면 현미경 사진을 추가하세요'
+      },
+      points: `<p>✦ 연륜(나이테)이 동심원으로 보임</p>
+               <p>✦ 도관·가도관의 구멍 배열 패턴 확인 가능</p>
+               <p>✦ 방사조직이 방사선 방향으로 뻗어나가는 것을 확인 가능</p>
+               <p>✦ 침엽수·활엽수 구분에 가장 직관적인 단면</p>`
+    },
+    tls: {
+      label: '접선단면 (Tangential Longitudinal Section, TLS)',
+      term: {
+        text: '접선단면은 연륜의 접선 방향(둘레 방향)에 <strong>수직</strong>으로 자른 세로 단면입니다. 수피에 평행하게 켠 면으로, 연륜이 완만하게 굽은 선으로 보입니다.',
+        imgSrc: null,
+        imgLabel: '접선단면 개념도'
+      },
+      photo: {
+        text: '접선단면(TLS)은 방사조직의 폭(세포 열 수)과 높이(세포 행 수)를 관찰하기에 가장 적합한 단면입니다. 세 단면 중 수종 식별에 가장 많이 활용됩니다.',
+        imgSrc: null,
+        imgLabel: '접선단면 현미경 사진을 추가하세요'
+      },
+      points: `<p>✦ 방사조직의 <strong>폭(너비, 세포 열 수)</strong> 관찰에 최적</p>
+               <p>✦ 방사조직이 렌즈 모양으로 단독·집합하여 보임</p>
+               <p>✦ 연륜은 완만하게 굽은 선으로 나타남</p>
+               <p>✦ 수종 식별에 가장 널리 쓰이는 단면 (약어: TLS)</p>`
+    },
+    rs: {
+      label: '방사단면 (Radial Longitudinal Section, RS)',
+      term: {
+        text: '방사단면은 수(髓)에서 수피를 향하는 방사방향에 <strong>수직</strong>으로 자른 세로 단면입니다. 나무를 수피를 향해 쪼갰을 때 보이는 면입니다.',
+        imgSrc: null,
+        imgLabel: '방사단면 개념도'
+      },
+      photo: {
+        text: '방사단면(RS)에서는 방사조직의 높이(세포 행 수)와 세포 내부 구조를 관찰하기에 적합합니다. 가도관·도관의 길이도 이 단면에서 확인할 수 있습니다.',
+        imgSrc: null,
+        imgLabel: '방사단면 현미경 사진을 추가하세요'
+      },
+      points: `<p>✦ 방사조직의 <strong>높이(세포 행 수)</strong> 관찰에 최적</p>
+               <p>✦ 세포 내부 구조(벽공 등) 확인 가능</p>
+               <p>✦ 연륜이 수평 줄무늬로 보임</p>
+               <p>✦ 약어: RS (Radial Section)</p>`
+    }
+  };
+
+  let currentCS = null;
+  let currentSubTab = 'term';
+
+  function showCrossSection(key) {
+    currentCS = key;
+    currentSubTab = 'term';
+    /* 버튼 활성화 */
+    document.querySelectorAll('#section-btns .topic-btn').forEach(b => b.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+    /* 그리드 표시 */
+    const grid = document.getElementById('cs-grid');
+    grid.style.display = 'grid';
+    /* 박스1 제목 */
+    document.getElementById('cs-box1-title').textContent = CROSS_SECTIONS[key].label;
+    /* 서브탭 초기화 */
+    document.getElementById('cs-btn-term').classList.add('active');
+    document.getElementById('cs-btn-photo').classList.remove('active');
+    /* 서브 패널 내용 채우기 */
+    renderSubPanel();
+    /* 박스2: 관찰 포인트 */
+    document.getElementById('cs-points').innerHTML = CROSS_SECTIONS[key].points;
+  }
+
+  function showSubPanel(tab) {
+    if (!currentCS) return;
+    currentSubTab = tab;
+    document.getElementById('cs-btn-term').classList.toggle('active', tab === 'term');
+    document.getElementById('cs-btn-photo').classList.toggle('active', tab === 'photo');
+    renderSubPanel();
+  }
+
+  function renderSubPanel() {
+    const data = CROSS_SECTIONS[currentCS][currentSubTab];
+    document.getElementById('cs-text').innerHTML = data.text;
+    const imgBox = document.getElementById('cs-img');
+    if (data.imgSrc) {
+      imgBox.innerHTML = `<img src="${data.imgSrc}" alt="${data.imgLabel}">`;
+    } else {
+      imgBox.innerHTML = `<div class="img-placeholder-text">
+        <svg class="placeholder-icon" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        ${data.imgLabel}
+      </div>`;
+    }
+    /* 페이드 */
+    const body = document.getElementById('cs-content');
+    body.classList.remove('panel-fade');
+    void body.offsetWidth;
+    body.classList.add('panel-fade');
+  }
+  </script>
+
+</body>
+</html>
