@@ -7,3 +7,6 @@
 
 * [한국어 버전으로 보기](./ko/)
 * [English Version](./en/)
+
+### 🇰🇷 한국어 버전 (Korean)
+* [목재해부학(Woodanatomy)](./ko/woodanatomy.md)
