@@ -115,8 +115,9 @@ img { max-width: 100%; display: block; }
   position: relative;
   overflow: hidden;
   padding: 5rem 2rem 4rem;
-  text-align: center;
-  z-index: 1;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .hero-eyebrow {
