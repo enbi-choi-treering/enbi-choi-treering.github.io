@@ -197,9 +197,7 @@
       <p class="page-eyebrow">목재해부학 · STEP 1</p>
       <h1 class="page-title">목재의 방향과 주요 3단면</h1>
       <p class="page-intro">
-        목재를 현미경으로 관찰하려면 먼저 <strong>올바른 방향</strong>으로 잘라야 합니다.
-        나무줄기의 구조와 자르는 방향을 이해하면, 각 단면에서 무엇을 볼 수 있는지 자연스럽게 파악됩니다.
-        아래 버튼을 눌러 각 항목을 탐색해 보세요.
+        목재의 해부학적 특징을 현미경으로 정확히 관찰하려면 관찰할 정확한 방향을 아는 것이 중요합니다. 본문에서는 목재 식별의 기준이 되는 목재의 3가지 주요 단면이 무엇이며, 각각 어떤 방향의 의미하는지 다룹니다.
       </p>
     </div>
 
@@ -209,8 +207,7 @@
     ══════════════════════════════════ -->
     <section class="interact-section">
       <h2 class="section-title">1. 목재의 구조</h2>
-      <p class="interact-desc">부위를 선택하면 아래에 세부 설명과 위치 이미지가 나타납니다.</p>
-
+      
       <div class="btn-group" id="structure-btns">
         <button class="topic-btn active" onclick="showStructure('bark', this)">수피</button>
         <button class="topic-btn" onclick="showStructure('cambium', this)">형성층</button>
@@ -239,12 +236,13 @@
     ══════════════════════════════════ -->
     <section class="interact-section">
       <h2 class="section-title">2. 목재의 주요 3단면</h2>
-      <p class="interact-desc">단면을 선택하면 왼쪽에 용어설명, 오른쪽에 단면설명·단면사진 탭이 나타납니다.</p>
-
+      <p class="interact-desc">목재의 해부학적 특징을 관찰할 때에는 총 <strong>3가지의 단면</strong>을 관찰합니다. 이 3단면을 우리는 "횡단면, 접선단면, 방사단면"이라 부릅니다.<br>
+      3단면은 <strong>나이테</strong>(1년에 1개씩 나무가 만드는 동심원의 띠)만 찾으면 쉽게 구분할 수 있습니다.</p>
+      
       <div class="btn-group" id="section-btns">
-        <button class="topic-btn moss active" onclick="showCrossSection('ts', this)">횡단면 (TS)</button>
-        <button class="topic-btn moss" onclick="showCrossSection('tls', this)">접선단면 (TLS)</button>
-        <button class="topic-btn moss" onclick="showCrossSection('rs', this)">방사단면 (RS)</button>
+        <button class="topic-btn moss active" onclick="showCrossSection('ts', this)">횡단면</button>
+        <button class="topic-btn moss" onclick="showCrossSection('tls', this)">접선단면</button>
+        <button class="topic-btn moss" onclick="showCrossSection('rs', this)">방사단면</button>
       </div>
 
       <div class="cs-grid" id="cs-grid">
@@ -262,7 +260,7 @@
         <div class="sub-panel">
           <div class="sub-panel-header" id="cs-right-title"></div>
           <div class="sub-tab-group">
-            <button class="sub-tab active" id="tab-desc" onclick="showRightTab('desc')">단면설명</button>
+            <button class="sub-tab active" id="tab-desc" onclick="showRightTab('desc')">단면찾기</button>
             <button class="sub-tab" id="tab-photo" onclick="showRightTab('photo')">단면사진</button>
           </div>
           <div class="sub-panel-body panel-fade" id="cs-right-body">
@@ -299,42 +297,38 @@
       name: '수피 (Bark)', tag: '최외층',
       desc: `<p>수피는 나무의 가장 바깥층으로, 외부 환경으로부터 나무를 보호하는 역할을 합니다. 크게 <strong>외수피(outer bark)</strong>와 <strong>내수피(inner bark, 체관부)</strong>로 나뉩니다.</p>
              <p>외수피는 죽은 세포로 이루어져 있으며 기계적 보호와 수분 손실을 방지합니다. 내수피(체관부)는 살아있는 세포로 구성되며, 광합성 산물(당)을 나무 전체로 이동시킵니다.</p>`,
-      caption: '▲ 횡단면에서 바라본 수피의 위치 (가장 바깥쪽 층)',
+      caption: '▲ 목재 디스크 단면에서 바라본 수피의 위치 (가장 바깥쪽 껍질층)',
       imgSrc: null, imgLabel: '수피 위치 이미지를 추가하세요'
     },
     cambium: {
       name: '형성층 (Vascular Cambium)', tag: '분열층',
-      desc: `<p>형성층은 수피와 목부 사이에 위치하는 얇은 세포층으로, 나무의 굵기 생장을 담당합니다. 세포분열이 활발한 <strong>분열조직(meristem)</strong>입니다.</p>
-             <p>형성층은 바깥쪽으로 체관부(내수피) 세포를, 안쪽으로 목부(물관부) 세포를 생성합니다. 봄철에 분열이 활발해지면서 연륜(나이테)의 한 층이 만들어집니다.</p>`,
-      caption: '▲ 수피와 목부 사이의 얇은 형성층 위치',
+      desc: `<p>형성층은 수피와 목부 사이에 위치하는 얇은 세포층으로, 나무의 직경 생장을 담당합니다. 세포분열이 활발한 <strong>분열조직(meristem)</strong>입니다. 바깥쪽으로 체관부(내수피) 세포를, 안쪽으로 목부 세포를 생성합니다. </p>`,
+      caption: '▲ 수피와 목부 사이에 위치한 형성층대',
       imgSrc: null, imgLabel: '형성층 위치 이미지를 추가하세요'
     },
     xylem: {
       name: '목부 (Xylem / Wood)', tag: '물·양분 이동',
-      desc: `<p>목부는 우리가 흔히 '목재'라고 부르는 부분입니다. 뿌리에서 흡수한 물과 무기염류를 잎까지 위쪽으로 운반하는 역할을 합니다.</p>
-             <p>목부는 침엽수의 경우 <strong>가도관(tracheid)</strong>, 활엽수의 경우 <strong>도관(vessel)</strong>이 주요 물 이동 통로로 작용합니다. 나무의 부피 대부분을 차지하는 구조입니다.</p>`,
-      caption: '▲ 나무 줄기의 대부분을 차지하는 목부',
+      desc: `<p>목부는 우리가 흔히 '목재'라고 부르는 부분입니다. 침엽수의 경우 <strong>가도관(tracheid)</strong>, 활엽수의 경우 <strong>도관(vessel)</strong>이 주요 물 이동 통로로 작용합니다. 나무의 부피 대부분을 차지합니다.</p>`,
+      caption: '▲ 목재 디스크 단면에서 바라본 목부',
       imgSrc: null, imgLabel: '목부 위치 이미지를 추가하세요'
     },
     sapwood: {
-      name: '변재 (Sapwood)', tag: '기능재',
+      name: '변재 (Sapwood)', tag: '목부',
       desc: `<p>변재는 목부의 바깥쪽, 형성층에 가까운 부분으로 <strong>살아있는 유세포(parenchyma)</strong>를 포함하고 있습니다. 수분과 양분의 이동이 활발하게 일어나는 기능적 목부입니다.</p>
              <p>수종에 따라 변재의 두께가 다르며, 일반적으로 심재보다 색이 밝고 연합니다. 수분 함량이 높아 부후균에 취약한 편입니다.</p>`,
       caption: '▲ 목부의 바깥쪽에 위치하는 밝은 색의 변재',
       imgSrc: null, imgLabel: '변재 위치 이미지를 추가하세요'
     },
     heartwood: {
-      name: '심재 (Heartwood)', tag: '비기능재',
-      desc: `<p>심재는 목부의 중심부로, 세포가 죽고 <strong>타닌·수지·색소</strong> 등의 추출물이 침적되어 있습니다. 더 이상 물을 이동시키지 않는 비기능적 목부입니다.</p>
-             <p>추출물로 인해 변재보다 색이 짙고, 내구성과 내부후성이 높습니다. 수종 식별 시 색과 향이 중요한 단서가 됩니다. (예: 흑단의 짙은 검정색, 삼나무의 붉은 색)</p>`,
+      name: '심재 (Heartwood)', tag: '목부',
+      desc: `<p>심재는 목부의 중심부로, 세포가 죽고 <strong>타닌·수지·색소</strong> 등의 추출물이 침적되어 있습니다. 더 이상 물을 이동시키지 않는 비기능적 목부입니다. 추출물로 인해 변재보다 색이 짙고, 내구성과 내부후성이 높습니다.</p>`,
       caption: '▲ 목부의 중심부, 색이 짙은 심재',
       imgSrc: null, imgLabel: '심재 위치 이미지를 추가하세요'
     },
     pith: {
       name: '수 (Pith)', tag: '중심부',
-      desc: `<p>수는 줄기의 가장 중심에 위치하는 조직으로, 어린 줄기에서는 양분 저장 역할을 합니다. 성숙한 나무에서는 수가 쪼그라들거나 비어있는 경우도 많습니다.</p>
-             <p>횡단면에서 보면 중앙의 원형 또는 별 모양으로 보이는 조직입니다. 수의 형태(원형, 삼각형, 오각형 등)와 색깔은 수종 식별에 보조적인 단서가 되기도 합니다.</p>`,
-      caption: '▲ 줄기의 정중앙에 위치하는 수',
+      desc: `<p>수는 줄기의 가장 중심에 위치하는 조직으로, 어린 줄기에서는 양분 저장 역할을 합니다. 성숙한 나무에서는 수가 쪼그라들거나 비어있는 경우도 많습니다. 횡단면에서 보면 중앙의 원형 또는 별 모양으로 보이는 조직입니다.</p>`,
+      caption: '▲ 목재 디스크 단면에서 관찰되는 정중앙에 위치하는 수',
       imgSrc: null, imgLabel: '수 위치 이미지를 추가하세요'
     }
   };
@@ -365,47 +359,47 @@
   ═══════════════════════════ */
   const CS = {
     ts: {
-      label: '횡단면 (Transverse Section, TS)',
+      label: '횡단면 (Cross/transverse Section)',
       term: {
-        text: '횡단면은 나무의 종방향(길이 방향)에 <strong>수직</strong>으로 자른 단면입니다. 통나무를 가로로 잘랐을 때 보이는 면으로, 연륜(나이테)이 동심원 형태로 나타납니다.',
+        text: ''횡'은 한자의 '가로 횡(橫)'으로 서 있는 나무를 가로방향으로 잘랐을 때 나타나는 면을 말합니다.',
         imgSrc: null, imgLabel: '횡단면 개념도를 추가하세요 (gif 또는 이미지)'
       },
       desc: {
-        text: '횡단면(TS)에서는 도관(활엽수) 또는 가도관(침엽수)의 배열 패턴, 연륜 경계, 방사조직의 주행 방향을 확인할 수 있습니다. 침엽수·활엽수 구분에 가장 직관적인 단면입니다.',
+        text: '<strong>나이테가 동심원 형태로 관찰</strong>됩니다.',
         imgSrc: null, imgLabel: '횡단면 단면설명 이미지를 추가하세요'
       },
       photo: {
-        text: '✦ 연륜(나이테)이 동심원으로 보임\n✦ 도관·가도관의 구멍 배열 패턴 확인 가능\n✦ 방사조직이 방사선 방향으로 뻗어나감',
+        text: '✦ 연륜(나이테)이 동심원으로 관찰되는 면\n✦ 도관·가도관의 구멍 배열 패턴 확인 가능\n✦ 방사조직이 방사방향으로 뻗어나감',
         imgSrc: null, imgLabel: '횡단면 현미경 사진을 추가하세요'
       }
     },
     tls: {
-      label: '접선단면 (Tangential Longitudinal Section, TLS)',
+      label: '접선단면 (Tangential Section)',
       term: {
-        text: '접선단면은 연륜의 접선 방향(둘레 방향)에 <strong>수직</strong>으로 자른 세로 단면입니다. 수피에 평행하게 켠 면으로, 연륜이 완만하게 굽은 선으로 보입니다.',
+        text: '접선(接線)은 임의의 곡선 위에 한 점을 찍고, 그 점을 통과하는 선을 뜻합니다.',
         imgSrc: null, imgLabel: '접선단면 개념도를 추가하세요 (gif 또는 이미지)'
       },
       desc: {
-        text: '접선단면(TLS)은 방사조직의 폭(세포 열 수)과 높이(세포 행 수)를 관찰하기에 최적입니다. 방사조직이 렌즈 모양으로 보이며, 수종 식별에 가장 널리 활용됩니다.',
+        text: '목재의 원판에서 관찰되는 나이테에 접선의 의미를 적용해보면?\n 동심원의 나이테에 접선을 그리고, 그 선을 기준으로 잘랐을 때 관찰되는 면을 접선단면이라고 합니다.',
         imgSrc: null, imgLabel: '접선단면 단면설명 이미지를 추가하세요'
       },
       photo: {
-        text: '✦ 방사조직의 폭(너비) 관찰에 최적\n✦ 방사조직이 렌즈 모양으로 보임\n✦ 수종 식별에 가장 많이 쓰이는 단면',
+        text: '✦ 목재의 아름다운 무늬가 관찰되는 면\n✦ 방사조직의 폭(너비) 관찰에 최적',
         imgSrc: null, imgLabel: '접선단면 현미경 사진을 추가하세요'
       }
     },
     rs: {
-      label: '방사단면 (Radial Longitudinal Section, RS)',
+      label: '방사단면 (Radial Section)',
       term: {
-        text: '방사단면은 수(髓)에서 수피를 향하는 방사방향에 <strong>수직</strong>으로 자른 세로 단면입니다. 나무를 수피 방향으로 쪼갰을 때 보이는 면입니다.',
+        text: '방사(放射)'는 어떠한 물체의 중심으로부터 바퀴살처럼 사방으로 뻩치는 방향을 뜻한다.',
         imgSrc: null, imgLabel: '방사단면 개념도를 추가하세요 (gif 또는 이미지)'
       },
       desc: {
-        text: '방사단면(RS)에서는 방사조직의 높이(세포 행 수)와 세포 내부 구조(벽공 등)를 관찰하기에 적합합니다. 연륜이 수평 줄무늬로 나타납니다.',
+        text: '나무의 중심인 수(pith)를 기준으로 나이테를 수직으로 관통하는 선을 그리고, 잘랐을 때 나타나는 면을 방사단면이라고 합니다.',
         imgSrc: null, imgLabel: '방사단면 단면설명 이미지를 추가하세요'
       },
       photo: {
-        text: '✦ 방사조직의 높이(세포 행 수) 관찰에 최적\n✦ 세포 내부 구조(벽공 등) 확인 가능\n✦ 연륜이 수평 줄무늬로 보임',
+        text: '✦ 나이테의 무늬결이 세로로 반듯반듯한 모습을 띔\n✦ 방사조직의 높이(세포 행 수) 관찰에 최적\n✦ 세포 내부 구조(벽공 등) 확인 가능',
         imgSrc: null, imgLabel: '방사단면 현미경 사진을 추가하세요'
       }
     }
