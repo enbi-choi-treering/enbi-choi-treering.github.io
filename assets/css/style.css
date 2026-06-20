@@ -142,12 +142,16 @@ img { max-width: 100%; display: block; }
   color: var(--ring);
 }
 
+.hero {
+  text-align: left; /* 텍스트 전체 좌측 정렬 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 내부 요소 왼쪽 정렬 */
+}
+
 .hero-desc {
-  max-width: 560px;
-  margin: 0 auto 2rem;
-  font-size: 1rem;
-  color: var(--text-mid);
-  line-height: 1.8;
+  max-width: 100%; /* 카드 영역 너비만큼 확장 */
+  margin-right: 0;
 }
 
 .hero-meta {
@@ -622,11 +626,4 @@ img { max-width: 100%; display: block; }
   .header-nav a { padding: 0.3rem 0.5rem; font-size: 0.75rem; }
 }
 
-/* 본문 너비 제한 해제 */
-section.main-content {
-  max-width: 100%;
-}
 
-section.main-content p {
-  max-width: 100%;
-}
