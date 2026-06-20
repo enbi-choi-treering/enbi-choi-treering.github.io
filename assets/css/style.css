@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap');
-
 /* ── 색상 토큰 ─────────────────────────────── */
 :root {
   --bg:         #F7F4EE;
@@ -26,12 +24,8 @@ html { font-size: 16px; scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  /* 홈페이지 전체 폰트를 고딕체(산세리프)로 통일 */
-  body, h1, h2, h3, h4, h5, h6, p, a, span, div {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-  }
-  line-height: 1.75;
-  min-height: 100vh;
+  /* 시스템 기본 산세리프 폰트 조합 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 a { color: var(--moss); text-decoration: none; }
@@ -78,7 +72,7 @@ img { max-width: 100%; display: block; }
 }
 
 .site-logo {
-  font-family: 'Noto Serif KR', serif;
+  font-family: inherit;
   font-size: 1rem;
   font-weight: 700;
   color: #F7F4EE;
@@ -98,7 +92,7 @@ img { max-width: 100%; display: block; }
 
 .header-nav a {
   color: rgba(247,244,238,.75);
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   font-size: 0.82rem;
   font-weight: 500;
   padding: 0.35rem 0.8rem;
@@ -124,7 +118,7 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-eyebrow {
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -155,7 +149,7 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-meta {
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   font-size: 0.8rem;
   color: var(--text-soft);
 }
@@ -190,7 +184,7 @@ img { max-width: 100%; display: block; }
 .track-label-dot.green { background: var(--moss); }
 
 .track-title {
-  font-family: 'Noto Serif KR', serif;
+  font-family: inherit;
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--bark);
@@ -250,7 +244,7 @@ img { max-width: 100%; display: block; }
 .card:hover::before { opacity: 1; }
 
 .card-step {
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -261,7 +255,7 @@ img { max-width: 100%; display: block; }
 .card.moss-accent .card-step { color: var(--moss); }
 
 .card-title {
-  font-family: 'Noto Serif KR', serif;
+  font-family: inherit;
   font-size: 1rem;
   font-weight: 700;
   color: var(--bark);
@@ -281,7 +275,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   font-weight: 500;
   margin-top: 0.5rem;
 }
@@ -309,7 +303,7 @@ img { max-width: 100%; display: block; }
 }
 
 .sidebar-label {
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -330,7 +324,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   font-size: 0.82rem;
   color: var(--text-mid);
   padding: 0.45rem 0.7rem;
@@ -374,7 +368,7 @@ img { max-width: 100%; display: block; }
 }
 
 .page-eyebrow {
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -386,7 +380,7 @@ img { max-width: 100%; display: block; }
 .page-eyebrow.moss { color: var(--moss); }
 
 .page-title {
-  font-family: 'Noto Serif KR', serif;
+  font-family: inherit;
   font-size: clamp(1.4rem, 3vw, 1.9rem);
   font-weight: 700;
   color: var(--bark);
@@ -406,7 +400,7 @@ img { max-width: 100%; display: block; }
 }
 
 .section-title {
-  font-family: 'Noto Serif KR', serif;
+  font-family: inherit;
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--bark);
@@ -440,7 +434,7 @@ img { max-width: 100%; display: block; }
 .concept-card.moss { border-left-color: var(--moss); }
 
 .concept-card-title {
-  font-family: 'Noto Serif KR', serif;
+  font-family: inherit;
   font-weight: 700;
   font-size: 0.9rem;
   color: var(--bark);
@@ -480,7 +474,7 @@ img { max-width: 100%; display: block; }
   gap: 0.5rem;
   height: 240px;
   color: var(--text-soft);
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   font-size: 0.82rem;
   margin: 1.5rem 0;
 }
@@ -497,7 +491,7 @@ img { max-width: 100%; display: block; }
 }
 
 .quiz-q {
-  font-family: 'Noto Serif KR', serif;
+  font-family: inherit;
   font-weight: 700;
   font-size: 1rem;
   color: var(--bark);
@@ -522,7 +516,7 @@ img { max-width: 100%; display: block; }
   color: var(--text);
   background: var(--bg);
   transition: all .18s;
-  font-family: 'Noto Serif KR', serif;
+  font-family: inherit;
 }
 
 .quiz-option:hover { border-color: var(--ring); background: #FDF0EB; }
@@ -548,7 +542,7 @@ img { max-width: 100%; display: block; }
   border: 1.5px solid var(--bark-light);
   border-radius: 7px;
   color: var(--bark);
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   font-size: 0.8rem;
   cursor: pointer;
   transition: background .15s;
@@ -576,7 +570,7 @@ img { max-width: 100%; display: block; }
   padding: 0.65rem 1.25rem;
   border: 1.5px solid var(--border);
   border-radius: 8px;
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   font-size: 0.82rem;
   font-weight: 500;
   color: var(--text-mid);
@@ -606,7 +600,7 @@ img { max-width: 100%; display: block; }
   color: rgba(247,244,238,.65);
   text-align: center;
   padding: 2rem;
-  font-family: 'Inter', sans-serif;
+  font-family: inherit;
   font-size: 0.78rem;
   line-height: 1.8;
 }
