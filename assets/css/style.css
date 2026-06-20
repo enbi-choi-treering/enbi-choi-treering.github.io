@@ -26,15 +26,10 @@ html { font-size: 16px; scroll-behavior: smooth; }
 body {
   background: var(--bg);
   color: var(--text);
-  /* 제목 폰트 설정 */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Noto Serif KR', serif;
-}
-
-/* 본문 폰트 설정 */
-body, p, a, span, div {
-  font-family: 'Georgia', serif;
-}
+  /* 폰트를 모두 고딕체(Inter)로 통일 */
+  body, p, a, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
   line-height: 1.75;
   min-height: 100vh;
 }
