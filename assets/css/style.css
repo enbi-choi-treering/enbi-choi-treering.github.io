@@ -621,3 +621,12 @@ img { max-width: 100%; display: block; }
   .cards { grid-template-columns: 1fr; }
   .header-nav a { padding: 0.3rem 0.5rem; font-size: 0.75rem; }
 }
+
+/* 본문 너비 제한 해제 */
+section.main-content {
+  max-width: 100%;
+}
+
+section.main-content p {
+  max-width: 100%;
+}
