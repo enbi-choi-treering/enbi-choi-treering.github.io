@@ -31,16 +31,20 @@
     }
 
     .topic-btn {
-      padding: 0.48rem 1.1rem;
+      flex: 1 1 auto;
+      min-width: 80px;
+      padding: 0.75rem 1.1rem;
       border: 1.5px solid var(--border);
-      border-radius: 999px;
+      border-radius: 10px;
       background: var(--bg-card);
       color: var(--text-mid);
       font-family: inherit;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
+      font-weight: 500;
       cursor: pointer;
       transition: all .18s;
       white-space: nowrap;
+      text-align: center;
     }
     .topic-btn:hover { border-color: var(--bark-light); color: var(--bark); background: var(--bg-subtle); }
     .topic-btn.active { background: var(--bark); color: #F7F4EE; border-color: var(--bark); font-weight: 600; }
@@ -241,7 +245,7 @@
         <img src="이미지파일명.jpg" alt="목재 3단면 개요">
       </div>
        
-      <p class="interact-desc">목재의 해부학적 특징을 관찰할 때에는 총 <strong>3가지의 단면</strong>을 관찰합니다. 이 3단면을 우리는 "횡단면, 접선단면, 방사단면"이라 부릅니다. 3단면은 <strong>나이테(1년에 1개씩 나무가 만드는 동심원의 띠)</strong>만 찾으면 쉽게 구분할 수 있습니다.</p>
+      <p class="interact-desc">목재의 해부학적 특징을 관찰할 때에는 총 <strong>3가지의 단면</strong>을 관찰합니다. 이 3단면을 우리는 "횡단면, 접선단면, 방사단면"이라 부릅니다. 3단면은 <strong>나이테(1년에 1개씩 나무가 만드는 동심원의 띠)</strong>만 찾으면 쉽게 구분할 수 있습니다.<br></p>
       
       <div class="btn-group" id="section-btns">
         <button class="topic-btn moss active" onclick="showCrossSection('ts', this)">횡단면</button>
