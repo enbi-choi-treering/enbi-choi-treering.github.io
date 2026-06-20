@@ -150,8 +150,11 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-desc {
-  max-width: 100%; /* 카드 영역 너비만큼 확장 */
-  margin-right: 0;
+  max-width: 560px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.8;
 }
 
 .hero-meta {
