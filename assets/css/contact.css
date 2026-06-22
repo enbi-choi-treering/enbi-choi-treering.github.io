@@ -1,0 +1,78 @@
+/* =========================================
+   CONTACT
+   ========================================= */
+.contact-intro {
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  max-width: 50ch;
+}
+
+.contact-form {
+  max-width: 520px;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.6rem 0.875rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-base);
+  font-size: var(--font-size-sm);
+  transition: border-color var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.6;
+}
+
+/* Honeypot */
+.form-group--honeypot {
+  display: none !important;
+  visibility: hidden;
+}
+
+.form-status {
+  margin-top: 1rem;
+  font-size: var(--font-size-sm);
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  display: none;
+}
+
+.form-status--success {
+  display: block;
+  background: #e8f4e8;
+  color: var(--color-green);
+  border: 1px solid #c5e0c5;
+}
+
+.form-status--error {
+  display: block;
+  background: #fef0f0;
+  color: #c0392b;
+  border: 1px solid #f5c6c6;
+}

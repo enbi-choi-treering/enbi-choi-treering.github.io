@@ -1,0 +1,50 @@
+/* =========================================
+   CV
+   ========================================= */
+.cv-section { margin-bottom: 2.5rem; }
+
+.cv-section__title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.cv-row {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+  align-items: start;
+}
+
+.cv-row:last-child { border-bottom: none; }
+
+.cv-row__year {
+  color: var(--color-accent);
+  font-weight: 600;
+  padding-top: 0.1em;
+}
+
+.cv-row__content strong {
+  display: block;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.cv-row__content span {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.cv-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}

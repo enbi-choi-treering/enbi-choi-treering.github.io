@@ -1,0 +1,19 @@
+{
+  "images": [
+    {
+      "src": "assets/images/gallery/gallery-01.jpg",
+      "caption": "Field sampling in East Asia",
+      "alt": "Field sampling"
+    },
+    {
+      "src": "assets/images/gallery/gallery-02.jpg",
+      "caption": "Tree-ring core analysis",
+      "alt": "Tree-ring core analysis"
+    },
+    {
+      "src": "assets/images/gallery/gallery-03.jpg",
+      "caption": "Laboratory stable isotope preparation",
+      "alt": "Laboratory work"
+    }
+  ]
+}

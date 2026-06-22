@@ -1,0 +1,16 @@
+{
+  "siteTitle": "En-Bi Choi | Dendrochronologist & Paleoclimatologist",
+  "analyticsId": "",
+  "dendroEduUrl": "https://dendro-edu.example.com",
+  "copyright": "© 2026 En-Bi Choi. All texts, images, figures, and research materials on this website are protected by copyright. Reproduction, redistribution, modification, or commercial use without written permission is prohibited.",
+  "theme": {
+    "defaultMode": "auto",
+    "colors": {
+      "primary": "#4b2e05",
+      "secondary": "#6b4423",
+      "accent": "#8b5a2b",
+      "muted": "#a67c52",
+      "green": "#556b2f"
+    }
+  }
+}

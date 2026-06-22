@@ -1,0 +1,120 @@
+/* =========================================
+   PUBLICATIONS — WORD CLOUD
+   ========================================= */
+.word-cloud {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  min-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.word-cloud__word {
+  display: inline-block;
+  line-height: 1.2;
+  cursor: default;
+  transition: opacity var(--transition);
+  font-weight: 600;
+}
+
+.word-cloud__word:hover { opacity: 0.7; }
+
+/* =========================================
+   PUBLICATIONS — FILTER
+   ========================================= */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.filter-bar__clear {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.filter-bar__clear:hover {
+  background: var(--color-surface);
+}
+
+/* =========================================
+   PUBLICATIONS — ARCHIVE
+   ========================================= */
+.pub-year-group { margin-bottom: 2.5rem; }
+
+.pub-year-group__heading {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pub-year-group__heading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.pub-entry {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pub-entry:last-child { border-bottom: none; }
+
+.pub-entry__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pub-entry__citation {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: 0.4rem;
+}
+
+.pub-entry__title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+.pub-entry__title:hover { color: var(--color-primary); }
+
+.pub-entry__doi {
+  font-size: var(--font-size-xs);
+  color: var(--color-muted);
+  margin-top: 0.35rem;
+  display: inline-block;
+}
+
+.pub-entry__keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.pub-entry--hidden { display: none; }

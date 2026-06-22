@@ -1,0 +1,13 @@
+{
+  "projects": [
+    {
+      "id": "project-001",
+      "title": "Example Research Project",
+      "description": "Project description.",
+      "status": "ongoing",
+      "startYear": 2023,
+      "endYear": null,
+      "tags": ["dendrochronology", "East Asia"]
+    }
+  ]
+}
