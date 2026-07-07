@@ -78,20 +78,54 @@ async function renderInterests() {
   `).join('');
 }
 
-/* ---- Awards ---- */
-async function renderAwards() {
-  const { awards } = await loadJSON('data/awards.json');
+/* ---- Funding and Awards (awards + grants, newest first) ---- */
+async function renderFundingAndAwards() {
   const container = document.getElementById('awards-list');
   if (!container) return;
-  const sorted = [...awards].sort((a, b) => b.year - a.year);
-  container.innerHTML = sorted.map(a => `
-    <div class="award-row">
-      <span class="award-row__year">${formatDate(a.date || String(a.year))}</span>
-      <span>${a.description}${a.organization ? ` — <em>${a.organization}</em>` : ''}${a.title ? `<br><span style="font-size:var(--font-size-sm);color:var(--color-text-muted);font-style:italic">${a.title}</span>` : ''}</span>
-    </div>
-  `).join('');
+
+  const [awardsRes, grantsRes] = await Promise.allSettled([
+    loadJSON('data/awards.json'),
+    loadJSON('data/grants.json'),
+  ]);
+
+  const awards = awardsRes.status === 'fulfilled' ? (awardsRes.value.awards || []) : [];
+  const grants = grantsRes.status === 'fulfilled' ? (grantsRes.value.grants || []) : [];
+
+  const merged = [
+    ...awards.map(a => ({ ...a, _type: 'award' })),
+    ...grants.map(g => ({ ...g, _type: 'grant' })),
+  ].sort((a, b) => (b.year || 0) - (a.year || 0));
+
+  if (!merged.length) {
+    container.innerHTML = '<p style="color:var(--color-text-muted);font-size:var(--font-size-sm)">No entries yet.</p>';
+    return;
+  }
+
+  container.innerHTML = merged.map(item => {
+    const dateStr  = formatDate(item.date || String(item.year || ''));
+    const typeBadge = item._type === 'grant'
+      ? `<span class="badge badge--grant">Grant</span> `
+      : `<span class="badge badge--award">Award</span> `;
+
+    let mainText, subText, extraLine = '';
+
+    if (item._type === 'grant') {
+      mainText = item.title;
+      const parts = [item.funder, item.role ? `(${item.role})` : ''].filter(Boolean).join(' ');
+      subText  = parts + (item.amount ? ` — ${item.amount}` : '');
+    } else {
+      mainText = item.description;
+      subText  = item.organization || '';
+      if (item.title) extraLine = `<br><span style="font-size:var(--font-size-sm);color:var(--color-text-muted);font-style:italic">${item.title}</span>`;
+    }
+
+    return `<div class="award-row">
+      <span class="award-row__year">${dateStr}</span>
+      <span>${typeBadge}${mainText}${subText ? ` — <em>${subText}</em>` : ''}${extraLine}</span>
+    </div>`;
+  }).join('');
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-  await Promise.allSettled([renderGallery(), renderBiography(), renderInterests(), renderAwards()]);
+  await Promise.allSettled([renderGallery(), renderBiography(), renderInterests(), renderFundingAndAwards()]);
 });
