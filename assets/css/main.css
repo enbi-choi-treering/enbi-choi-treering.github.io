@@ -156,6 +156,18 @@ a:hover { color: var(--color-secondary); }
   color: #3d5a7a;
   border-color: color-mix(in srgb, #5b7fa6 28%, var(--color-border));
 }
+
+.badge--award {
+  background: color-mix(in srgb, var(--color-accent) 12%, var(--color-surface));
+  color: var(--color-secondary);
+  border-color: color-mix(in srgb, var(--color-accent) 32%, var(--color-border));
+}
+.badge--grant {
+  background: color-mix(in srgb, #4a85a5 11%, var(--color-surface));
+  color: #2e6080;
+  border-color: color-mix(in srgb, #4a85a5 28%, var(--color-border));
+}
+[data-theme="dark"] .badge--grant { color: #7ab8d4; }
 [data-theme="dark"] .badge--lang {
   color: #8ab4d4;
   background: color-mix(in srgb, #5b7fa6 15%, var(--color-surface));
