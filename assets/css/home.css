@@ -1,153 +1,150 @@
 /* =========================================
-   HOME — HERO
+   En-Bi Choi — home.css  (homepage only)
+   Hero with a tree-ring cross-section signature.
    ========================================= */
-.home {
-  /* Homepage-specific palette (lighter, warm/cream background) */
-  --color-bg: #fbf8f4;
-  --color-surface: #ffffff;
-  --color-border: #e9e1d6;
-  --color-text: #22221f;
-  --color-text-muted: #6e675f;
-  --color-primary: #3b5243;
-  --color-secondary: #6b4423;
+
+/* ---- HERO ---- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 4.5rem 0 3.5rem;
+  border-bottom: 1px solid var(--color-border);
+  background:
+    radial-gradient(120% 90% at 85% 0%,
+      color-mix(in srgb, var(--color-accent) 8%, transparent) 0%,
+      transparent 55%),
+    var(--color-bg);
 }
 
-.hero {
-  padding: 4rem 0 3rem;
-  border-bottom: 1px solid var(--color-border);
+/* Tree-ring watermark — the page's signature element */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 50%; right: -140px;
+  width: 560px; height: 560px;
+  transform: translateY(-50%);
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20600%20600%22%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%228.0%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%222.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%2221.2%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%2231.0%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%2250.4%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%2258.8%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%222.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%2275.9%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%2289.9%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%2298.0%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%22114.6%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%222.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%22122.3%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%22137.6%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%22145.9%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%22154.6%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%222.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%22169.7%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%22192.4%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%22201.8%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%22213.0%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%222.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%22231.9%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%22256.9%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%22274.9%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%221.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%22289.4%22%20fill%3D%22none%22%20stroke%3D%22%238A4B2A%22%20stroke-width%3D%222.4%22%2F%3E%3Ccircle%20cx%3D%22300%22%20cy%3D%22300%22%20r%3D%223%22%20fill%3D%22%238A4B2A%22%2F%3E%3C%2Fsvg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.10;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(circle, #000 55%, transparent 78%);
+          mask-image: radial-gradient(circle, #000 55%, transparent 78%);
+  animation: ring-in 900ms ease both;
+}
+@keyframes ring-in {
+  from { opacity: 0; transform: translateY(-50%) scale(0.94); }
+  to   { opacity: 0.10; transform: translateY(-50%) scale(1); }
 }
 
 .hero__inner {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 210px 1fr;
   gap: 3rem;
   align-items: center;
+  animation: hero-rise 700ms ease both;
+}
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.hero__photo {
-  width: 220px;
-  height: 220px;
+/* Photo framed like a tree-ring core */
+.hero__photo, .hero__photo-placeholder {
+  width: 210px; height: 210px;
+  border-radius: 50%;
   object-fit: cover;
-  border-radius: 12px;
-  border: 3px solid var(--color-border);
-  pointer-events: none;
-  user-select: none;
-}
-
-.hero__photo-placeholder {
-  width: 220px;
-  height: 220px;
-  border-radius: 12px;
-  border: 3px solid var(--color-border);
   background: var(--color-surface);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-muted);
-  font-size: var(--font-size-sm);
+  box-shadow:
+    0 0 0 4px var(--color-surface),
+    0 0 0 6px color-mix(in srgb, var(--color-accent) 45%, var(--color-border)),
+    0 0 0 12px var(--color-surface),
+    0 0 0 13px var(--color-border),
+    0 18px 40px -18px rgba(60, 40, 20, 0.35);
+}
+.hero__photo-placeholder {
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-text-muted); font-size: var(--font-size-sm);
 }
 
 .hero__name {
+  font-family: var(--font-display);
   font-size: var(--font-size-3xl);
-  font-weight: 700;
-  color: var(--color-primary);
-  line-height: 1.2;
-  margin-bottom: 0.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  line-height: 1.08;
+  margin-bottom: 0.5rem;
 }
-
 .hero__position {
-  font-size: var(--font-size-base);
-  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+  font-weight: 500;
   margin-bottom: 1.25rem;
 }
-
 .hero__intro {
   color: var(--color-text);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
   max-width: 56ch;
+  font-size: var(--font-size-base);
 }
 
-/* =========================================
-   HOME — NEWS
-   ========================================= */
+/* ---- NEWS ---- */
 .news-list { list-style: none; }
-
 .news-item {
   display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 1rem;
-  padding: 0.75rem 0;
+  grid-template-columns: 130px 1fr;
+  gap: 1.25rem;
+  padding: 1rem 0;
   border-bottom: 1px solid var(--color-border);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-base);
 }
-
 .news-item:last-child { border-bottom: none; }
-
 .news-item__date {
-  color: var(--color-text-muted);
-  white-space: nowrap;
-  padding-top: 0.1em;
-}
-
-/* =========================================
-   HOME — LATEST PUBLICATIONS
-   ========================================= */
-.pub-card {
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.pub-card:last-child { border-bottom: none; }
-
-.pub-card__meta {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.pub-card__citation {
-  font-size: var(--font-size-sm);
-  color: var(--color-text);
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
-}
-
-.pub-card__title {
-  font-size: var(--font-size-sm);
+  color: var(--color-primary);
   font-weight: 600;
-  color: var(--color-secondary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  padding-top: 0.05em;
+}
+
+/* ---- LATEST PUBLICATIONS ---- */
+.pub-card {
+  padding: 1.4rem 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-surface);
+  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+}
+.pub-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--color-accent) 45%, var(--color-border));
+  box-shadow: 0 14px 34px -20px rgba(60, 40, 20, 0.45);
+}
+.pub-card__meta { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.65rem; flex-wrap: wrap; }
+.pub-card__citation { font-size: var(--font-size-sm); color: var(--color-text-muted); margin-bottom: 0.5rem; line-height: 1.6; }
+.pub-card__title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.65rem;
+  line-height: 1.3;
 }
-
 .pub-card__title:hover { color: var(--color-primary); }
+.pub-card__keywords { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 
-.pub-card__keywords {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-}
-
-/* =========================================
-   RESPONSIVE
-   ========================================= */
-@media (max-width: 600px) {
-  .hero__inner {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero__photo,
-  .hero__photo-placeholder {
-    width: 160px;
-    height: 160px;
-    margin: 0 auto;
-  }
-
-  .news-item {
-    grid-template-columns: 1fr;
-    gap: 0.25rem;
-  }
+/* ---- RESPONSIVE ---- */
+@media (max-width: 640px) {
+  .hero { padding: 3rem 0 2.5rem; }
+  .hero::after { width: 380px; height: 380px; right: -120px; opacity: 0.07; }
+  .hero__inner { grid-template-columns: 1fr; text-align: center; gap: 1.75rem; justify-items: center; }
+  .hero__photo, .hero__photo-placeholder { width: 160px; height: 160px; }
+  .hero__intro { margin-left: auto; margin-right: auto; }
+  .news-item { grid-template-columns: 1fr; gap: 0.25rem; }
+  .news-item__date { padding-top: 0; }
 }
