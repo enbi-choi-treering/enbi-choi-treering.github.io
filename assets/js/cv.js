@@ -29,7 +29,7 @@ async function renderCV() {
   /* Education */
   document.getElementById('cv-education').innerHTML =
     [...edu.education].sort((a,b) => b.year - a.year).map(e =>
-      row(e.year, `<strong>${e.degree}, ${e.field}</strong>
+      row(formatDate(e.date || String(e.year)), `<strong>${e.degree}, ${e.field}</strong>
         <span>${e.institution}, ${e.location}</span>
         ${e.thesis ? `<span>Thesis: ${e.thesis}</span>` : ''}`)
     ).join('');
@@ -37,7 +37,7 @@ async function renderCV() {
   /* Employment */
   document.getElementById('cv-employment').innerHTML =
     [...emp.employment].sort((a,b) => b.startYear - a.startYear).map(e =>
-      row(`${e.startYear}–${e.endYear || 'present'}`,
+      row(`${formatDate(e.startDate || String(e.startYear))}–${e.endDate ? formatDate(e.endDate) : 'present'}`,
         `<strong>${e.title}</strong>
         <span>${e.institution}, ${e.department}</span>
         <span>${e.location}</span>`)
@@ -46,7 +46,7 @@ async function renderCV() {
   /* Awards */
   document.getElementById('cv-awards').innerHTML =
     [...awards.awards].sort((a,b) => b.year - a.year).map(a =>
-      row(a.year, `<strong>${a.description}</strong>
+      row(formatDate(a.date || String(a.year)), `<strong>${a.description}</strong>
         <span>${a.organization}</span>
         ${a.title ? `<span style="font-size:var(--font-size-sm);font-style:italic">${a.title}</span>` : ''}`)
     ).join('');
@@ -54,7 +54,7 @@ async function renderCV() {
   /* Grants */
   document.getElementById('cv-grants').innerHTML =
     [...grants.grants].sort((a,b) => b.year - a.year).map(g =>
-      row(g.year, `<strong>${g.title}</strong>
+      row(formatDate(g.date || String(g.year)), `<strong>${g.title}</strong>
         <span>${g.funder} — ${g.role}${g.amount ? ` (${g.amount})` : ''}</span>`)
     ).join('');
 
@@ -74,7 +74,7 @@ async function renderCV() {
   /* Teaching */
   document.getElementById('cv-teaching').innerHTML =
     [...teaching.teaching].sort((a,b) => b.year - a.year).map(t =>
-      row(t.year, `<strong>${t.role}</strong>
+      row(formatDate(t.date || String(t.year)), `<strong>${t.role}</strong>
         <span>${t.course} — ${t.institution}</span>`)
     ).join('');
 }
