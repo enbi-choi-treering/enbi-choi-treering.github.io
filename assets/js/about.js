@@ -87,7 +87,7 @@ async function renderAwards() {
   container.innerHTML = sorted.map(a => `
     <div class="award-row">
       <span class="award-row__year">${a.year}</span>
-      <span>${a.description}${a.organization ? ` — <em>${a.organization}</em>` : ''}</span>
+      <span>${a.description}${a.organization ? ` — <em>${a.organization}</em>` : ''}${a.title ? `<br><span style="font-size:var(--font-size-sm);color:var(--color-text-muted);font-style:italic">${a.title}</span>` : ''}</span>
     </div>
   `).join('');
 }
