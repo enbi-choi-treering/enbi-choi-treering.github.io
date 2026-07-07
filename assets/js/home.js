@@ -1,5 +1,5 @@
 /**
- * home.js — Hero · News · Research Topics · Latest Publications
+ * home.js — Hero · News · Latest Publications
  */
 
 async function loadJSON(path) {
@@ -21,13 +21,28 @@ async function renderHero() {
   const img  = document.getElementById('hero-photo');
   const name = document.getElementById('hero-name');
   const pos  = document.getElementById('hero-position');
-  if (img) {
-    img.src = profile.profilePhoto;
-    img.alt = profile.name;
-    img.onerror = () => { img.parentElement.innerHTML = `<div class="hero__photo-placeholder">Photo</div>`; };
-  }
+
   if (name) name.textContent = profile.name;
   if (pos)  pos.textContent  = `${profile.position}, ${profile.affiliation}`;
+
+  if (img) {
+    if (profile.profilePhoto) {
+      img.alt = profile.name;
+      img.onerror = () => {
+        // ★ fix: replaceWith() 으로 img 하나만 교체 — 형제 요소(이름, 직위)는 유지
+        const placeholder = document.createElement('div');
+        placeholder.className = 'hero__photo-placeholder';
+        placeholder.textContent = 'Photo';
+        img.replaceWith(placeholder);
+      };
+      img.src = profile.profilePhoto;
+    } else {
+      const placeholder = document.createElement('div');
+      placeholder.className = 'hero__photo-placeholder';
+      placeholder.textContent = 'Photo';
+      img.replaceWith(placeholder);
+    }
+  }
 }
 
 /* ---- News ---- */
@@ -37,7 +52,7 @@ async function renderNews() {
   if (!list) return;
   const sorted = [...news].sort((a, b) => b.date.localeCompare(a.date));
   list.innerHTML = sorted.map(item => {
-    const label   = formatDate(item.date);   // ← 연도-월 형식
+    const label   = formatDate(item.date);
     const content = item.link
       ? `<a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.content}</a>`
       : item.content;
@@ -46,48 +61,6 @@ async function renderNews() {
       <span>${content}</span>
     </li>`;
   }).join('');
-}
-
-/* ---- Research Topics (keyword cloud) ---- */
-async function renderResearchTopics() {
-  const { publications } = await loadJSON('data/publications.json');
-
-  // Build frequency from Keywords column only
-  const freq = {};
-  publications.forEach(pub => {
-    (pub.keywords || []).forEach(kw => {
-      const k = kw.trim();
-      if (k) freq[k] = (freq[k] || 0) + 1;
-    });
-  });
-  const sorted = Object.entries(freq).sort((a, b) => b[1] - a[1]).slice(0, 45);
-  if (!sorted.length) return;
-
-  const max = sorted[0][1];
-  const min = sorted[sorted.length - 1][1];
-  const range = max - min || 1;
-
-  // Inject section before Latest Publications
-  const latestSection = document.getElementById('latest-pubs')?.closest('section');
-  if (!latestSection) return;
-
-  const section = document.createElement('section');
-  section.className = 'section';
-  section.innerHTML = `
-    <div class="container">
-      <h2 class="section__title">Research Topics</h2>
-      <div class="topic-cloud">
-        ${sorted.map(([kw, count]) => {
-          const size = (0.82 + ((count - min) / range) * 1.3).toFixed(2);
-          const enc  = encodeURIComponent(kw);
-          return `<a href="publications.html?kw=${enc}"
-                    class="topic-cloud__tag"
-                    style="font-size:${size}rem"
-                    title="${count} paper${count > 1 ? 's' : ''}">${kw}</a>`;
-        }).join('')}
-      </div>
-    </div>`;
-  latestSection.parentNode.insertBefore(section, latestSection);
 }
 
 /* ---- Latest Publications ---- */
@@ -99,7 +72,8 @@ async function renderLatestPublications() {
   container.innerHTML = sorted.map(pub => {
     const authors  = formatAuthors(pub.authors);
     const keywords = (pub.keywords || []).map(k =>
-      `<a href="publications.html?kw=${encodeURIComponent(k)}" class="keyword-tag">${k}</a>`
+      `<a href="publications.html?kw=${encodeURIComponent(k.replace(/<[^>]+>/g,''))}"
+          class="keyword-tag">${k}</a>`
     ).join('');
     const oa = pub.openAccess ? `<span class="badge badge--oa">Open Access</span>` : '';
     return `<div class="pub-card">
@@ -118,10 +92,5 @@ async function renderLatestPublications() {
 
 /* ---- Boot ---- */
 document.addEventListener('DOMContentLoaded', async () => {
-  await Promise.allSettled([
-    renderHero(),
-    renderNews(),
-    renderResearchTopics(),
-    renderLatestPublications(),
-  ]);
+  await Promise.allSettled([renderHero(), renderNews(), renderLatestPublications()]);
 });
