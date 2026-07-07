@@ -1,8 +1,29 @@
 {
   "interests": [
-    { "icon": "🌲", "title": "Dendrochronology", "description": "Tree-ring width and stable isotope chronologies for dating and climate reconstruction." },
-    { "icon": "🌏", "title": "Paleoclimatology", "description": "Reconstructing past hydroclimate variability in East Asia using proxy records." },
-    { "icon": "🏛️", "title": "Cultural Heritage Science", "description": "Dating historical wooden structures and artifacts using tree-ring methods." },
-    { "icon": "⚗️", "title": "Stable Isotope Analysis", "description": "Oxygen isotope ratios (δ¹⁸O) as a proxy for past environmental conditions." }
+    {
+      "icon": "🌲",
+      "title": "Tree-ring Stable Isotope",
+      "description": "Developing δ<sup>18</sup>O chronologies from tree rings for high-resolution paleoclimate reconstruction in East Asia."
+    },
+    {
+      "icon": "🏛️",
+      "title": "Cultural Heritage Science & Archaeology",
+      "description": "Dating historical wooden structures and excavated artifacts using dendrochronological and radiocarbon methods."
+    },
+    {
+      "icon": "🌡️",
+      "title": "Dendroclimatology",
+      "description": "Reconstructing past climate variability from tree-ring width and stable isotope proxies."
+    },
+    {
+      "icon": "🌏",
+      "title": "Paleoclimatology",
+      "description": "Understanding long-term climate change and human-environment interactions using multi-proxy approaches."
+    },
+    {
+      "icon": "💧",
+      "title": "Hydroclimate Reconstruction in East Asia",
+      "description": "Detecting past changes in precipitation and drought patterns using tree-ring oxygen isotopes across East Asia."
+    }
   ]
 }
