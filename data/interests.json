@@ -1,34 +1,8 @@
 {
   "interests": [
-    {
-      "id": "tree-ring-isotopes",
-      "title": "Tree-ring Stable Isotopes",
-      "icon": "🌳",
-      "description": "Analyzing oxygen, carbon, and hydrogen isotopes preserved in tree-ring cellulose to reconstruct past hydroclimate and atmospheric conditions."
-    },
-    {
-      "id": "heritage-archaeology",
-      "title": "Cultural Heritage Science & Archaeology",
-      "icon": "🏛️",
-      "description": "Applying dendrochronological methods to date and authenticate wooden artifacts, historic structures, and archaeological materials."
-    },
-    {
-      "id": "dendroclimatology",
-      "title": "Dendroclimatology",
-      "icon": "🔬",
-      "description": "Using tree-ring width and density chronologies to reconstruct historical climate variability at regional to continental scales."
-    },
-    {
-      "id": "paleoclimatology",
-      "title": "Paleoclimatology",
-      "icon": "🌡️",
-      "description": "Integrating multiple proxy records to understand long-term climate dynamics, natural variability, and forcing mechanisms."
-    },
-    {
-      "id": "hydroclimate-east-asia",
-      "title": "Hydroclimate Reconstruction in East Asia",
-      "icon": "🌏",
-      "description": "Developing high-resolution precipitation and drought reconstructions for East Asia using tree-ring networks and historical archives."
-    }
+    { "icon": "🌲", "title": "Dendrochronology", "description": "Tree-ring width and stable isotope chronologies for dating and climate reconstruction." },
+    { "icon": "🌏", "title": "Paleoclimatology", "description": "Reconstructing past hydroclimate variability in East Asia using proxy records." },
+    { "icon": "🏛️", "title": "Cultural Heritage Science", "description": "Dating historical wooden structures and artifacts using tree-ring methods." },
+    { "icon": "⚗️", "title": "Stable Isotope Analysis", "description": "Oxygen isotope ratios (δ¹⁸O) as a proxy for past environmental conditions." }
   ]
 }

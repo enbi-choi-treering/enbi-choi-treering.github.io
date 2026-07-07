@@ -1,18 +1,8 @@
 {
-  "greeting": "Hello! 안녕하세요! こんにちは!",
-  "subgreeting": "Thank you for visiting my website.",
+  "greeting": "Hello, I'm En-Bi Choi.",
+  "subgreeting": "Postdoctoral Researcher at Nagoya University",
   "paragraphs": [
-    "I am a researcher from South Korea and currently work as a Postdoctoral Researcher at the Institute for Space-Earth Environmental Research (ISEE) and the Transdisciplinary Network Linking Space-Earth Environmental Science, History, and Archaeology (TRANSEHA) in Japan. My research focuses on reconstructing past environments using tree rings and integrating historical records with natural scientific evidence to better understand interactions between humans and the environment. I am particularly interested in paleoclimate reconstruction using stable oxygen isotopes, with the ultimate goal of detecting and understanding long-term climate variability in East Asia at high temporal resolution.",
-    "During my undergraduate studies, I investigated the causes of differences in tree growth by monitoring cambial activity. During my M.S. and Ph.D. studies, I developed the first network of seven tree-ring oxygen isotope chronologies across a latitudinal gradient in South Korea and evaluated the regional applicability of oxygen isotope-based dating techniques.",
-    "In addition to academic research, I have worked at a tree-ring research center since 2017, where I gained practical experience in wood species identification, dendrochronological dating, radiocarbon dating, stable isotope analysis, and conservation treatment of excavated woods. Based on these experiences, I am interested in interdisciplinary research that combines dendrochronology, cultural heritage science, history, and paleoclimatology.",
-    "<Research Interests>",
-    "* Tree-ring stable isotope",
-    "* Cultural Heritage Science & Archaeology",
-    "* Dendroclimatology",
-    "* Paleoclimatology",
-    "* Hydroclimate Reconstruction in East Asia",
-    "I am also interested in connecting research and education. Through my experiences as a research assistant (RA) and public lecturer, I realized that many students and non-specialists find wood anatomy and dendrochronology difficult to approach. Through the Dendro-Edu website, which I am currently developing, I hope to make these fields more accessible and engaging for students and the general public.",
-    "I enjoy learning new research methods and integrating them into my existing work. In particular, I am fascinated by connecting ideas from different disciplines to develop new research questions and innovative approaches to solving them.",
-    "Outside the laboratory, I enjoy watching musicals, listening to jazz, solving logic puzzles such as Sudoku and Nonograms, and participating in a variety of sports activities."
+    "I use tree rings, stable isotopes, and historical records to investigate past climate variability and human–environment interactions in East Asia.",
+    "My research bridges dendrochronology, paleoclimatology, cultural heritage science, and archaeology to better understand how past societies responded to environmental change."
   ]
 }

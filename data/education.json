@@ -1,12 +1,1 @@
-{
-  "education": [
-    {
-      "degree": "Ph.D.",
-      "field": "Example Field",
-      "institution": "Example University",
-      "location": "Country",
-      "year": 2023,
-      "thesis": "Thesis title"
-    }
-  ]
-}
+{ "education": [] }
