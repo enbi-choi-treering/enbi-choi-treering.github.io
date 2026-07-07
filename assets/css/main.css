@@ -190,9 +190,49 @@ a:hover { color: var(--color-secondary); }
 }
 .btn--outline { background: transparent; color: var(--color-primary); border-color: color-mix(in srgb, var(--color-primary) 40%, var(--color-border)); }
 .btn--outline:hover { background: var(--color-primary); color: #fff; }
+
+/* ══ Word cloud colours — auto-switch in dark mode ══════════════════════ */
+:root {
+  --wc-c1: #6b4423;  --wc-c2: #8b5a2b;  --wc-c3: #a0722a;
+  --wc-c4: #556b2f;  --wc-c5: #7a5a2a;  --wc-c6: #4b2e05;
+}
+[data-theme="dark"] {
+  --wc-c1: #e0b97a;  --wc-c2: #f0ca88;  --wc-c3: #c8d890;
+  --wc-c4: #96d068;  --wc-c5: #d4aa6c;  --wc-c6: #f8d888;
+}
+
 .author-highlight { color: var(--color-primary); font-weight: 700; }
 
 /* ============ RESPONSIVE ============ */
+
+/* ══ Dark mode readability improvements ═════════════════════════════════ */
+[data-theme="dark"] .word-cloud__word {
+  opacity: 0.92;
+}
+[data-theme="dark"] .word-cloud__word.active,
+[data-theme="dark"] .keyword-tag.active {
+  background: color-mix(in srgb, var(--color-primary) 30%, var(--color-surface));
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+[data-theme="dark"] .pub-card,
+[data-theme="dark"] .pub-entry {
+  border-color: var(--color-border);
+}
+[data-theme="dark"] .pub-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 8px 24px -16px var(--color-accent);
+}
+[data-theme="dark"] .badge {
+  background: color-mix(in srgb, var(--color-accent) 15%, var(--color-surface));
+  color: var(--color-accent);
+}
+[data-theme="dark"] .badge--oa {
+  background: color-mix(in srgb, var(--color-green) 18%, var(--color-surface));
+  color: #78c878;
+  border-color: color-mix(in srgb, var(--color-green) 35%, var(--color-border));
+}
+
 @media (max-width: 768px) {
   .nav { padding: 0 1.25rem; }
   .nav__links, .nav__right { display: none; }
