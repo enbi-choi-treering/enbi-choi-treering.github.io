@@ -47,7 +47,8 @@ async function renderCV() {
   document.getElementById('cv-awards').innerHTML =
     [...awards.awards].sort((a,b) => b.year - a.year).map(a =>
       row(a.year, `<strong>${a.description}</strong>
-        <span>${a.organization}</span>`)
+        <span>${a.organization}</span>
+        ${a.title ? `<span style="font-size:var(--font-size-sm);font-style:italic">${a.title}</span>` : ''}`)
     ).join('');
 
   /* Grants */
