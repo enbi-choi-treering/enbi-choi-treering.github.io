@@ -35,7 +35,11 @@ permalink: /publications/
       <div class="pub-items">
   {% endif %}
         <article class="publication-item" data-topics="{{ pub.topics | join: '|' | downcase }}">
-          <div class="pub-topics">{% for topic in pub.topics %}<span>{{ topic }}</span>{% endfor %}</div>
+          <div class="pub-topics">
+            {% for topic in pub.topics %}
+              <span class="pub-topic">{{ topic }}</span>
+            {% endfor %}
+          </div>
           <h3><a href="{{ pub.url }}" {% unless pub.url == '#' %}target="_blank" rel="noopener"{% endunless %}>{{ pub.title }}</a></h3>
           <p class="authors">{{ pub.authors }}</p>
           <p class="journal">{{ pub.journal }}</p>

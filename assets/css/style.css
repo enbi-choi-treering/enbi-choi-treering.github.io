@@ -235,10 +235,15 @@ a.news-row:hover .news-text { text-decoration: underline; text-underline-offset:
 .publication-item { padding: 20px 2px 23px; border-bottom: 1px solid var(--line); }
 .pub-topics { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
 .pub-topics span {
+  display: inline-block;
+  padding: 3px 7px;
+  border: 1px solid #a9b3a3;
+  border-radius: 4px;
   font-size: 10px;
-  color: var(--muted);
+  color: #4f5f4b;
   text-transform: uppercase;
   letter-spacing: .05em;
+  background: #f7f8f4;
 }
 .publication-item h3 { margin: 0 0 6px; font-size: 16px; line-height: 1.45; font-weight: 600; color: var(--forest-dark); }
 .publication-item h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
@@ -309,4 +314,7 @@ a.news-row:hover .news-text { text-decoration: underline; text-underline-offset:
   .publication-tools { align-items: flex-start; flex-direction: column; }
   .cv-row { grid-template-columns: 1fr; gap: 3px; }
   .skills-grid { grid-template-columns: 1fr; }
+}
+.pub-topics {
+  margin-bottom: 8px;
 }
