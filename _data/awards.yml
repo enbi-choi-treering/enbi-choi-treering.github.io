@@ -1,32 +1,39 @@
-- year: "2022"
-  title: "Best Presentation Award"
+- year: "2026.08"
+  title: "Best Presentation Award (Oral)"
+  organization: "Korean Society of Forest Science"
+  detail: "Temporal Changes in Climate Responses of <em>Pinus densiflora</em> Revealed by Tree-Ring Width and δ<sup>18</sup>O"
+  show_in_news: true
+  news_date: "2026.08"
+  news_text: "Received the Best Presentation Award from the Korean Society of Forest Science."
+
+- year: "2022.09"
+  title: "Best Presentation Award (Poster)"
   organization: "Korean Society of Wood Science and Technology"
   detail: "New Device for Connecting Between Analyzers"
   show_in_news: true
-  news_date: "2022.09.01"
+  news_date: "2022.09"
   news_text: "Received the Best Presentation Award from the Korean Society of Wood Science and Technology."
 
-- year: "2019"
-  title: "Best Presentation Award"
+- year: "2019.04"
+  title: "Best Presentation Award (Poster)"
   organization: "Korean Society of Wood Science and Technology"
-  detail: "Investigating the Mortality of Abies koreana at Yeongshinbong in Jirisan National Park"
+  detail: "Investigating the Mortality of <em>Abies koreana</em> at Yeongshinbong in Jirisan National Park"
   show_in_news: true
-  news_date: "2019.04.01"
+  news_date: "2019.04"
   news_text: "Received the Best Presentation Award from the Korean Society of Wood Science and Technology."
 
-- year: "2018"
-  title: "Best Presentation Award"
+- year: "2018.04"
+  title: "Best Presentation Award (Poster)"
   organization: "Korean Society of Wood Science and Technology"
-  detail: "Monitoring the Seasonal Cambial Activities of Abies koreana, Pinus koraiensis, and Picea jezoensis"
+  detail: "Monitoring the Seasonal Cambial Activities of <em>Abies koreana, Pinus koraiensis, and Picea jezoensis</em>"
   show_in_news: true
-  news_date: "2018.04.01"
+  news_date: "2018.04"
   news_text: "Received the Best Presentation Award from the Korean Society of Wood Science and Technology."
 
-- year: "2017"
-  title: "Best Presentation Award"
+- year: "2017.04"
+  title: "Best Presentation Award (Poster)"
   organization: "Korean Society of Wood Science and Technology"
-  detail: "Ring-Width Chronology vs. δ18O Tree-Ring Chronology"
+  detail: "Ring-Width Chronology vs. δ<sup>18</sup>O Tree-Ring Chronology"
   show_in_news: true
-
-  news_date: "2017.04.01"
+  news_date: "2017.04"
   news_text: "Received the Best Presentation Award from the Korean Society of Wood Science and Technology."

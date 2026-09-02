@@ -1,8 +1,26 @@
-- period: "2026–2028"
+- period: "2026.04–2028.03"
   title: "Grant-in-Aid for Early-Career Scientists (KAKENHI)"
   agency: "Japan Society for the Promotion of Science (JSPS)"
   role: "Principal Investigator"
-  detail: "Reconstruction of East Asian paleoclimate and verification of historical events based on tree-ring oxygen isotopes and radiocarbon records from Japan and Korea"
+  detail: ""
   show_in_news: true
   news_date: "2026.04.08"
   news_text: "Awarded a KAKENHI Grant-in-Aid for Early-Career Scientists as Principal Investigator."
+
+- period: "2023.03–2023.12"
+  title: "Universities Leading Lab-Specific Start-Ups through the COMPA Grant"
+  agency: "Ministry of Science and ICT (MSIT) and Korea Institute of Startup & Entrepreneurship Development (KISED)"
+  role: "Principal Investigator"
+  detail: ""
+  show_in_news: false
+  news_date: ""
+  news_text: ""
+
+- period: "2022.01–2022.12"
+  title: "Fostering Laboratory-Specialized Startup Leading Universities"
+  agency: "Ministry of Science and ICT (MSIT)"
+  role: ""
+  detail: ""
+  show_in_news: false
+  news_date: ""
+  news_text: ""
