@@ -1,99 +1,129 @@
+- year: 2025
+  title: "Potential and applications of stable oxygen isotope chronologies for tree-ring dating in South Korea"
+  authors: "<strong><u>Choi, E.-B.</u></strong>, Park, J.-H., Sano, M., Nakatsuka, T., & Seo, J.-W."
+  journal: "Dendrochronologia"
+  topics: ["isotope", "dating", "cultural heritage"]
+  url: "https://doi.org/10.1016/j.dendro.2025.126433"
+  show_in_news: true
+  news_date: "2025.12"
+  news_text: "Published a study evaluating stable oxygen isotope chronologies for tree-ring dating in South Korea."
+
+- year: 2025
+  title: "Phenological activities of cambium and inter-annual variations of Pinus densiflora saplings upon CO2 enrichment"
+  authors: "Park, J.-H., <strong><u>Choi, E.-B.</u></strong>, Lim, H., & Seo, J.-W."
+  journal: "Journal of Wood Science"
+  topics: ["cambial activity", "anatomy"]
+  url: "https://doi.org/10.1186/s10086-025-02229-6"
+  show_in_news: false
+  news_date: ""
+  news_text: "Published a study on cambial phenology and inter-annual wood growth of Pinus densiflora under CO2 enrichment."
+
+- year: 2025
+  title: "Establishing ring width and cell chronologies for predicting future growth of Thuja koraiensis under climate change"
+  authors: "Park, J.-H., <strong><u>Choi, E.-B.</u></strong>, Lee, H.-Y., & Seo, J.-W."
+  journal: "Dendrochronologia"
+  topics: ["tree-ring width", "anatomy", "climate"]
+  url: "https://doi.org/10.1016/j.dendro.2025.126423"
+  show_in_news: false
+  news_date: ""
+  news_text: "Published ring-width and cell chronologies for assessing climate sensitivity and future growth of Thuja koraiensis."
+
+- year: 2024
+  title: "Summer climate information recorded in tree-ring oxygen isotope chronologies from seven locations in the Republic of Korea"
+  authors: "<strong><u>Choi, E.-B.</u></strong>, Park, J.-H., Sano, M., Nakatsuka, T., & Seo, J.-W."
+  journal: "Frontiers in Forests and Global Change"
+  topics: ["isotope", "climate"]
+  url: "https://doi.org/10.3389/ffgc.2024.1269346"
+  show_in_news: false
+  news_date: ""
+  news_text: "Published a nationwide tree-ring oxygen isotope study evaluating summer climate signals across the Republic of Korea."
+
 - year: 2024
   title: "The effects of CO2 enrichment on the radial growth of Pinus densiflora"
-  authors: "Choi, E.-B., Lim, H., & Seo, J.-W."
+  authors: "<strong><u>Choi, E.-B.</u></strong>, Lim, H., & Seo, J.-W."
   journal: "Journal of the Korean Wood Science and Technology"
   topics: ["tree-ring width", "climate"]
-  url: "#"
+  url: "https://doi.org/10.5658/WOOD.2024.52.3.289"
   show_in_news: false
   news_date: ""
   news_text: "Published a study on the radial growth response of Pinus densiflora under CO2 enrichment."
 
 - year: 2024
-  title: "Summer climate information recorded in tree-ring oxygen isotope chronologies from seven locations in the Republic of Korea"
-  authors: "Choi, E.-B., Park, J.-H., Sano, M., Nakatsuka, T., & Seo, J.-W."
-  journal: "Frontiers in Forests and Global Change"
-  topics: ["isotope", "climate", "dating"]
-  url: "#"
-  show_in_news: false
-  news_date: ""
-  news_text: "Published a Korea-wide tree-ring oxygen isotope study on summer climate signals."
-
-- year: 2024
   title: "Investigating the death years of evergreen conifers in landslide areas of Jirisan National Park and the abrupt growth reduction during their living"
-  authors: "Park, J.-H., Choi, E.-B., Kim, Y.-J., Yun, J.-U., Kim, J.-W., Myeong, H.-H., & Seo, J.-W."
+  authors: "Park, J.-H., <strong><u>Choi, E.-B.</u></strong>, Kim, Y.-J., Yun, J.-U., Kim, J.-W., Myeong, H.-H., & Seo, J.-W."
   journal: "Journal of the Korean Wood Science and Technology"
   topics: ["tree-ring width", "climate", "dating"]
-  url: "#"
+  url: "https://doi.org/10.5658/WOOD.2024.52.4.319"
   show_in_news: false
 
 - year: 2024
   title: "Comparisons of tracheid lengths in Pinus densiflora Siebold & Zucc.: Earlywood versus latewood and province versus province"
-  authors: "Seo, J.-W., Choi, E.-B., Park, J.-H., Lee, Y.-S., Lee, H.-M., & Kim, E.-S."
+  authors: "Seo, J.-W., <strong><u>Choi, E.-B.</u></strong>, Park, J.-H., Lee, Y.-S., Lee, H.-M., & Kim, E.-S."
   journal: "Holzforschung"
-  topics: ["tree-ring width"]
-  url: "#"
+  topics: ["tree-ring width","anatomy"]
+  url: "https://doi.org/10.1515/hf-2023-0107"
   show_in_news: false
 
 - year: 2023
   title: "The inter-annual growth characteristics of Rhododendron spp. shrubs in Mt. Halla, Jeju Island, Korea based on their tree rings"
-  authors: "Park, J.-H., Choi, E.-B., Jung, J., Kim, J.-K., & Seo, J.-W."
+  authors: "Park, J.-H., <strong><u>Choi, E.-B.</u></strong>, Jung, J., Kim, J.-K., & Seo, J.-W."
   journal: "Forests"
-  topics: ["tree-ring width", "climate"]
-  url: "#"
+  topics: ["tree-ring width", "climate","anatomy"]
+  url: "https://doi.org/10.3390/f14040716"
   show_in_news: false
 
 - year: 2021
   title: "The role of aging and wind in inducing death and/or growth reduction in Korean fir (Abies koreana Wilson) on Mt. Halla, Korea"
-  authors: "Seo, J.-W., Choi, E.-B., Park, J.-H., Kim, Y.-J., & Lim, H.-I."
+  authors: "Seo, J.-W., <strong><u>Choi, E.-B.</u></strong>, Park, J.-H., Kim, Y.-J., & Lim, H.-I."
   journal: "Atmosphere"
   topics: ["tree-ring width", "climate", "dating"]
-  url: "#"
+  url: "https://doi.org/10.3390/atmos12091135"
   show_in_news: false
 
 - year: 2021
   title: "Intra-annual dynamics of cambial and xylem phenology in subalpine conifers at Deogyusan National Park in the Republic of Korea"
-  authors: "Park, J.-H., Choi, E.-B., Park, H.-C., Lee, N.-Y., & Seo, J.-W."
+  authors: "Park, J.-H., <strong><u>Choi, E.-B.</u></strong>, Park, H.-C., Lee, N.-Y., & Seo, J.-W."
   journal: "Journal of Wood Science"
-  topics: ["tree-ring width", "climate"]
-  url: "#"
+  topics: ["tree-ring width", "climate","anatomy"]
+  url: "https://doi.org/10.1186/s10086-021-01950-2"
   show_in_news: false
 
 - year: 2020
   title: "Synchronizations of tree-ring δ18O time series within and between tree species and provinces in Korea: A case study using dominant tree species in high elevations"
-  authors: "Choi, E.-B., Sano, M., Park, J.-H., Kim, Y.-J., Li, Z., Nakatsuka, T., Hakozaki, M., Kimura, K., Jeong, H.-M., & Seo, J.-W."
+  authors: "<strong><u>Choi, E.-B.</u></strong>, Sano, M., Park, J.-H., Kim, Y.-J., Li, Z., Nakatsuka, T., Hakozaki, M., Kimura, K., Jeong, H.-M., & Seo, J.-W."
   journal: "Journal of Wood Science"
   topics: ["isotope", "dating", "climate"]
-  url: "#"
+  url: "https://doi.org/10.1186/s10086-020-01901-3"
   show_in_news: false
 
 - year: 2020
   title: "Reconstruction of resin collection history of pine forests in Korea from tree-ring dating"
-  authors: "Choi, E.-B., Kim, Y.-J., Park, J.-H., Park, C.-R., & Seo, J.-W."
+  authors: "<strong><u>Choi, E.-B.</u></strong>, Kim, Y.-J., Park, J.-H., Park, C.-R., & Seo, J.-W."
   journal: "Sustainability"
   topics: ["tree-ring width", "cultural heritage", "dating"]
-  url: "#"
+  url: "https://doi.org/10.3390/su12219118"
   show_in_news: false
 
 - year: 2019
   title: "Investigation of death years and inter-annual growth reduction of Korean firs (Abies koreana) at Yeongsil in Mt. Halla"
-  authors: "Seo, J.-W., Kim, Y.-J., Choi, E.-B., Park, J.-H., & Kim, J.-H."
+  authors: "Seo, J.-W., Kim, Y.-J., <strong><u>Choi, E.-B.</u></strong>, Park, J.-H., & Kim, J.-H."
   journal: "Journal of Korean Environmental Research and Technology"
   topics: ["tree-ring width", "climate", "dating"]
-  url: "#"
+  url: "https://doi.org/10.13087/kosert.2019.22.3.1"
   show_in_news: false
 
 - year: 2017
   title: "Establishing tree-ring δ18O chronologies for principle tree species at subalpine zone in Mt. Jiri National Park and their correlations with the corresponding climate"
-  authors: "Seo, J.-W., Jeong, H.-M., Sano, M., Choi, E.-B., Park, J.-H., Lee, K.-H., Kim, Y.-J., & Park, H.-C."
+  authors: "Seo, J.-W., Jeong, H.-M., Sano, M., <strong><u>Choi, E.-B.</u></strong>, Park, J.-H., Lee, K.-H., Kim, Y.-J., & Park, H.-C."
   journal: "Journal of Korean Wood Science and Technology"
   topics: ["isotope", "climate", "dating"]
-  url: "#"
+  url: "https://doi.org/10.5658/WOOD.2017.45.5.661"
   show_in_news: false
 
 - year: 2016
   title: "The association of intra-annual cambial activities of Pinus koraiensis and Chamaecyparis pisifera planted in Mt. Worak with climatic factors"
-  authors: "Seo, J.-W., Choi, E.-B., Ju, J.-D., & Shin, C.-S."
+  authors: "Seo, J.-W., <strong><u>Choi, E.-B.</u></strong>, Ju, J.-D., & Shin, C.-S."
   journal: "Journal of Korean Wood Science and Technology"
-  topics: ["tree-ring width", "climate"]
-  url: "#"
+  topics: ["tree-ring width", "climate", "anatomy"]
+  url: "https://doi.org/10.5658/WOOD.2017.45.1.43"
   show_in_news: false
