@@ -1,0 +1,90 @@
+---
+layout: default
+title: CV
+nav: cv
+permalink: /cv/
+---
+<section class="page-intro cv-intro">
+  <h1>Curriculum Vitae</h1>
+  <p>En-Bi CHOI, Ph.D.</p>
+</section>
+
+<section class="cv-section" id="education-training">
+  <h2>Education &amp; Training</h2>
+  {% for item in site.data.education %}
+  <div class="cv-row">
+    <div class="cv-date">{{ item.period }}</div>
+    <div>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.institution }}</p>
+      {% if item.detail != '' %}<p class="detail">{{ item.detail }}</p>{% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="cv-section" id="professional-experience">
+  <h2>Professional Experience</h2>
+  {% for item in site.data.experience %}
+  <div class="cv-row">
+    <div class="cv-date">{{ item.period }}</div>
+    <div>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.institution }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="cv-section" id="research-funding">
+  <h2>Research Funding</h2>
+  {% for item in site.data.funding %}
+  <div class="cv-row">
+    <div class="cv-date">{{ item.period }}</div>
+    <div>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.agency }} · {{ item.role }}</p>
+      <p class="detail">{{ item.detail }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="cv-section" id="research-projects">
+  <h2>Research Projects</h2>
+  {% for item in site.data.projects %}
+  <div class="cv-row">
+    <div class="cv-date">{{ item.period }}</div>
+    <div>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.organization }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="cv-section" id="awards-honors">
+  <h2>Awards &amp; Honors</h2>
+  {% for item in site.data.awards %}
+  <div class="cv-row">
+    <div class="cv-date">{{ item.year }}</div>
+    <div>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.organization }}</p>
+      <p class="detail">{{ item.detail }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="cv-section" id="research-skills">
+  <h2>Research Skills</h2>
+  <div class="skills-grid">
+    {% for group in site.data.skills %}
+    <div class="skill-group">
+      <h3>{{ group.group }}</h3>
+      <p>{{ group.items | join: ' · ' }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>

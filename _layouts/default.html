@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} | En-Bi Choi{% else %}En-Bi Choi | Tree-Ring Researcher{% endif %}</title>
+  <meta name="description" content="Academic homepage of En-Bi Choi, tree-ring researcher at Nagoya University.">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a class="site-name" href="{{ '/' | relative_url }}">En-Bi Choi</a>
+      <nav aria-label="Primary navigation">
+        <a href="{{ '/' | relative_url }}" {% if page.nav == 'home' %}class="active"{% endif %}>Home</a>
+        <a href="{{ '/publications/' | relative_url }}" {% if page.nav == 'publications' %}class="active"{% endif %}>Publications</a>
+        <a href="{{ '/cv/' | relative_url }}" {% if page.nav == 'cv' %}class="active"{% endif %}>CV</a>
+        <a href="{{ '/playground/' | relative_url }}" {% if page.nav == 'playground' %}class="active"{% endif %}>Playground</a>
+        <a href="{{ '/contact/' | relative_url }}" {% if page.nav == 'contact' %}class="active"{% endif %}>Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer wrap">
+    <span>© {{ 'now' | date: '%Y' }} En-Bi Choi</span>
+  </footer>
+
+  <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+</body>
+</html>

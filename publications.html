@@ -1,0 +1,44 @@
+---
+layout: default
+title: Publications
+nav: publications
+permalink: /publications/
+---
+<section class="page-intro publications-intro">
+  <h1>Publications</h1>
+  <div class="publication-tools">
+    <div>
+      <div class="section-label">Filter by topic</div>
+      <div class="filters" role="group" aria-label="Filter publications by topic">
+        <button class="filter-button active" data-filter="all">All</button>
+        <button class="filter-button" data-filter="tree-ring width">Tree-ring width</button>
+        <button class="filter-button" data-filter="isotope">Isotope</button>
+        <button class="filter-button" data-filter="cultural heritage">Cultural heritage</button>
+        <button class="filter-button" data-filter="climate">Climate</button>
+        <button class="filter-button" data-filter="dating">Dating</button>
+      </div>
+    </div>
+    <div class="paper-count"><span id="paper-count">{{ site.data.publications | size }}</span> papers</div>
+  </div>
+</section>
+
+{% assign pubs = site.data.publications | sort: 'year' | reverse %}
+{% assign current_year = '' %}
+<div id="publication-list">
+{% for pub in pubs %}
+  {% if pub.year != current_year %}
+    {% unless forloop.first %}</div></section>{% endunless %}
+    {% assign current_year = pub.year %}
+    <section class="pub-year" data-year="{{ pub.year }}">
+      <h2>{{ pub.year }}</h2>
+      <div class="pub-items">
+  {% endif %}
+        <article class="publication-item" data-topics="{{ pub.topics | join: '|' | downcase }}">
+          <div class="pub-topics">{% for topic in pub.topics %}<span>{{ topic }}</span>{% endfor %}</div>
+          <h3><a href="{{ pub.url }}" {% unless pub.url == '#' %}target="_blank" rel="noopener"{% endunless %}>{{ pub.title }}</a></h3>
+          <p class="authors">{{ pub.authors }}</p>
+          <p class="journal">{{ pub.journal }}</p>
+        </article>
+  {% if forloop.last %}</div></section>{% endif %}
+{% endfor %}
+</div>

@@ -1,0 +1,22 @@
+---
+layout: default
+title: Contact
+nav: contact
+permalink: /contact/
+---
+<section class="page-intro contact-page">
+  <h1>Contact</h1>
+  <div class="contact-block">
+    <h2>En-Bi CHOI</h2>
+    <p>Postdoctoral Researcher</p>
+    <p>Institute for Space-Earth Environmental Research (ISEE)<br>Nagoya University</p>
+    {% if site.author.email and site.author.email != "" %}
+    <p><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
+    {% endif %}
+  </div>
+  <div class="contact-links">
+    <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="{{ site.author.researchgate }}" target="_blank" rel="noopener">ResearchGate</a>
+    <a href="{{ site.author.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a>
+  </div>
+</section>

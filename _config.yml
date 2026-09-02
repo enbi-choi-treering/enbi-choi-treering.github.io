@@ -1,0 +1,17 @@
+title: "En-Bi Choi"
+description: "Academic homepage of En-Bi Choi, a tree-ring researcher at Nagoya University."
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: pretty
+
+# Update these once your GitHub Pages URL is known.
+author:
+  name: "En-Bi CHOI, Ph.D."
+  role: ""
+  position: "Postdoctoral Researcher"
+  affiliation: "Institute for Space-Earth Environmental Research (ISEE), Nagoya University"
+  email: "" # Add only an email address you intentionally want to publish
+  linkedin: "https://www.linkedin.com/in/en-bi-choi-43b7761a4"
+  researchgate: "https://www.researchgate.net/profile/En-Bi-Choi"
+  google_scholar: "#"

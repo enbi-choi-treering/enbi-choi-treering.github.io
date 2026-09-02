@@ -1,0 +1,33 @@
+# Jekyll build/cache
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Local/private files — never publish
+private/
+_private/
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+credentials*
+secrets*
+*.log
+
+# Local source documents / office files
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.pdf
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

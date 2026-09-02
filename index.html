@@ -1,0 +1,71 @@
+---
+layout: default
+nav: home
+---
+<section class="profile-card">
+  <div class="profile-left">
+    <div class="profile-photo-wrap">
+      <img class="profile-photo" src="{{ '/assets/images/profile-placeholder.svg' | relative_url }}" alt="Portrait of En-Bi Choi">
+    </div>
+    <div class="socials" aria-label="Academic profiles">
+      <a href="{{ site.author.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><img src="{{ '/assets/images/linkedin.svg' | relative_url }}" alt=""></a>
+      <a href="{{ site.author.researchgate }}" target="_blank" rel="noopener" aria-label="ResearchGate" title="ResearchGate"><img src="{{ '/assets/images/researchgate.svg' | relative_url }}" alt=""></a>
+      <a href="{{ site.author.google_scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><img src="{{ '/assets/images/google-scholar.svg' | relative_url }}" alt=""></a>
+    </div>
+  </div>
+
+  <div class="profile-main">
+    <h1>En-Bi CHOI, Ph.D.</h1>
+    <p class="role"></p>
+    <p class="position">Postdoctoral Researcher</p>
+    <p class="affiliation">Institute for Space-Earth Environmental Research (ISEE), Nagoya University</p>
+
+    <div class="interests">
+      <div class="section-label">Research Interests</div>
+      <div class="interest-list">
+        <span>Tree-ring width</span>
+        <span>Isotope</span>
+        <span>Cultural heritage</span>
+        <span>Climate</span>
+        <span>Dating</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="news-section">
+  <div class="section-head">
+    <h2>News</h2>
+  </div>
+  <div id="news-list" class="news-list" aria-live="polite"></div>
+  <button id="show-more-news" class="text-button" type="button" hidden>Show more</button>
+</section>
+
+<script>
+window.SITE_NEWS = [
+{% for item in site.data.publications %}{% if item.show_in_news %}{
+  category: "PUBLICATION",
+  date: "{{ item.news_date }}",
+  text: {{ item.news_text | jsonify }},
+  url: {{ item.url | jsonify }}
+},{% endif %}{% endfor %}
+{% for item in site.data.funding %}{% if item.show_in_news %}{
+  category: "FUNDING",
+  date: "{{ item.news_date }}",
+  text: {{ item.news_text | jsonify }},
+  url: "{{ '/cv/#research-funding' | relative_url }}"
+},{% endif %}{% endfor %}
+{% for item in site.data.awards %}{% if item.show_in_news %}{
+  category: "AWARD",
+  date: "{{ item.news_date }}",
+  text: {{ item.news_text | jsonify }},
+  url: "{{ '/cv/#awards-honors' | relative_url }}"
+},{% endif %}{% endfor %}
+{% for item in site.data.experience %}{% if item.show_in_news %}{
+  category: "POSITION",
+  date: "{{ item.news_date }}",
+  text: {{ item.news_text | jsonify }},
+  url: "{{ '/cv/#professional-experience' | relative_url }}"
+},{% endif %}{% endfor %}
+];
+</script>

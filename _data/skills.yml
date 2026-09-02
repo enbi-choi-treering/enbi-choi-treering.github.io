@@ -1,0 +1,10 @@
+- group: "Dendrochronology"
+  items: ["Tree-ring measurement", "Cross-dating", "Chronology development", "TSAP", "LINTAB"]
+- group: "Stable Isotopes"
+  items: ["Tree-ring cellulose preparation", "δ18O analysis", "TC/EA-IRMS"]
+- group: "Radiocarbon"
+  items: ["AMS 14C", "Wiggle matching", "Chronological verification"]
+- group: "Climate & Data Analysis"
+  items: ["R", "Climate–growth analysis", "Time-series analysis", "Change-point analysis"]
+- group: "Field & Laboratory"
+  items: ["Forest sampling", "Historical timber", "Archaeological wood", "Wood anatomy", "Microtome"]
