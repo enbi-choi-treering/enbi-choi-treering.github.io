@@ -67,5 +67,11 @@ window.SITE_NEWS = [
   text: {{ item.news_text | jsonify }},
   url: "{{ '/cv/#professional-experience' | relative_url }}"
 },{% endif %}{% endfor %}
+{% for item in site.data.education %}{% if item.show_in_news %}{
+  category: "EDUCATION",
+  date: "{{ item.news_date }}",
+  text: {{ item.news_text | jsonify }},
+  url: "{{ '/cv/#education-training' | relative_url }}"
+},{% endif %}{% endfor %}
 ];
 </script>
